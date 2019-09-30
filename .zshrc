@@ -123,6 +123,7 @@ alias uqamFn="cd ~/School/2019/fall/Functional"
 alias uqamOs="cd ~/School/2019/fall/Os"
 alias uqamStats="cd ~/School/2019/fall/Stats"
 alias uqamTele="cd ~/School/2019/fall/Telecom"
+alias dotfiles="cd ~/.dotfiles"
 # alias cd="cd && ls"
 #
 

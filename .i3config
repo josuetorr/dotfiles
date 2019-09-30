@@ -198,7 +198,7 @@ exec_always feh --bg-scale /home/josue/Pictures/Wallpapers/forest.jpg
 # disable borders
 hide_edge_borders both
 
-exec_always compton --config ~/.config/compton/compton.conf
+exec_always compton --config ~/.config/i3/compton/compton.conf
 
 # color variables
 set $bg-color 	         #2f343f
@@ -228,3 +228,8 @@ bar {
             }
         position top
 }
+
+# Reboot, Shutdown, Suspend
+bindsym $mod+shift+semicolon exec systemctl suspend
+bindsym $mod+shift+comma exec systemclt reboot
+bindsym $mod+shift+period exec systemctl poweroff
