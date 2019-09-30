@@ -4,6 +4,13 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/josue/.oh-my-zsh"
 
+# Path to jdk
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+export PATH=$PATH:$JAVA_HOME
+
+# Path to SNAP
+export PATH=$PATH:/snap/bin/
+ 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -106,13 +113,21 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias bashconfig="vim ~/.bashrc"
 alias vimconfig="vim ~/.vimrc"
+alias tmuxconfig="vim ~/.tmux.conf"
+alias i3config="vim ~/.config/i3/config"
 alias hyperconfig="vim ~/.hyper.js"
 alias gogh='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 alias DL="cd ~/Downloads"
 alias persweb="cd ~/Projects/personal-website"
-alias uqam="cd ~/School/2019/fall"
+alias uqamFn="cd ~/School/2019/fall/Functional"
+alias uqamOs="cd ~/School/2019/fall/Os"
+alias uqamStats="cd ~/School/2019/fall/Stats"
+alias uqamTele="cd ~/School/2019/fall/Telecom"
 # alias cd="cd && ls"
 #
 
 # zsh-syntax-highlighting
 source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+# Spaceship theme settings
+SPACESHIP_BATTERY_SHOW=always

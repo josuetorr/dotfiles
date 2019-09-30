@@ -19,8 +19,8 @@ call plug#end()
 
 " Enable auto-save on startup
 " Auto-save on all buffers
-let g:auto_save = 1
-let g:auto_save_write_all_buffers = 1
+let g:auto_save=1
+let g:auto_save_write_all_buffers=1
 
 " In no compatible mode
 set nocompatible
@@ -32,6 +32,9 @@ set number relativenumber
 set tabstop=4
 set expandtab
 set shiftwidth=4
+
+" set line highlight
+set cursorline
 
 " Set search highlighting
 set hls
@@ -73,13 +76,13 @@ let NERDTreeShowHidden=1
 let g:javascript_plugin_jsdoc = 1
 
 " Haskell-vim settings
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+let g:haskell_enable_quantification=1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo=1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax=1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms=1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles=1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers=1  " to enable highlighting of `static`
+let g:haskell_backpack=1                " to enable highlighting of backpack keywords
 
 " Stop vim from slowing down with vim-vue
-let g:vue_pre_processors = []
+let g:vue_pre_processors=[]
