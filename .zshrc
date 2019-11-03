@@ -15,7 +15,7 @@ export PATH=$PATH:/snap/bin/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -115,7 +115,7 @@ alias bashconfig="vim ~/.bashrc"
 alias vimconfig="vim ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
 alias i3config="vim ~/.config/i3/config"
-alias hyperconfig="vim ~/.hyper.js"
+alias i3bkconfig="vim ~/.config/i3/i3blocks.conf"
 alias gogh='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 alias DL="cd ~/Downloads"
 alias persweb="cd ~/Projects/personal-website"

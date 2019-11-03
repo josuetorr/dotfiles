@@ -14,6 +14,7 @@ Plug 'Rigellute/shades-of-purple.vim'
 Plug 'posva/vim-vue'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 "Plug 'powerline/powerline'
 call plug#end()
 
@@ -86,3 +87,8 @@ let g:haskell_backpack=1                " to enable highlighting of backpack key
 
 " Stop vim from slowing down with vim-vue
 let g:vue_pre_processors=[]
+
+" instant-markdown configs
+let g:instant_markdown_slow=1
+let g:instant_markdown_autostart=0
+let g:instant_markdown_mathjax = 1
