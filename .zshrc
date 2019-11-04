@@ -128,7 +128,7 @@ alias dotfiles="cd ~/.dotfiles"
 #
 
 # zsh-syntax-highlighting
-source ~/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 # Spaceship theme settings
 SPACESHIP_BATTERY_SHOW=always
