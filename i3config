@@ -180,7 +180,7 @@ assign [class="Thunderbird"] $ws3
 # === COMMON USED APPS ===
 bindsym $mod+Shift+b exec firefox
 bindsym $mod+Shift+t exec thunderbird
-bindsym $mod+Shift+f exec urxvt -e vifm
+bindsym $mod+Shift+f exec $TERMINAL -e vifm
 # === ================ ===
 
 # Open specific applications in floating mode
