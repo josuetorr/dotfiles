@@ -22,13 +22,14 @@ bindsym $mod+n border normal
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font xft:URWGothic-Book 11
-font pango:monaco 10, "Font Awesome 8"
+font pango:monaco 10, "Font Awesome 5 Brands", "Font Awesome 5 Free"
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+set $TERMINAL st
+bindsym $mod+Return exec $TERMINAL
 
 # kill focused window
 bindsym $mod+q kill
@@ -177,8 +178,9 @@ assign [class="Thunderbird"] $ws3
 # assign [class="Skype"] $ws5
 
 # === COMMON USED APPS ===
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+b exec firefox
 bindsym $mod+Shift+t exec thunderbird
+bindsym $mod+Shift+f exec urxvt -e vifm
 # === ================ ===
 
 # Open specific applications in floating mode
@@ -326,7 +328,7 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-    font xft:monaco 12
+    font xft:monaco 10
 	strip_workspace_numbers yes
 
     colors {
