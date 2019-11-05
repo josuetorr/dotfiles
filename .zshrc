@@ -15,7 +15,7 @@ export PATH=$PATH:/snap/bin/
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -114,7 +114,7 @@ alias zshconfig="vim ~/.zshrc"
 alias bashconfig="vim ~/.bashrc"
 alias vimconfig="vim ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
-alias i3config="vim ~/.config/i3/config"
+alias i3config="vim ~/.i3/config"
 alias i3bkconfig="vim ~/.config/i3/i3blocks.conf"
 alias gogh='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 alias DL="cd ~/Downloads"
@@ -124,11 +124,13 @@ alias uqamOs="cd ~/School/2019/fall/Os"
 alias uqamStats="cd ~/School/2019/fall/Stats"
 alias uqamTele="cd ~/School/2019/fall/Telecom"
 alias dotfiles="cd ~/.dotfiles"
+alias xresconfig="vim ~/.Xresources"
 # alias cd="cd && ls"
 #
+
+# Spaceship theme settings
+SPACESHIP_BATTERY_SHOW=always
 
 # zsh-syntax-highlighting
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
-# Spaceship theme settings
-SPACESHIP_BATTERY_SHOW=always
