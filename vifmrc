@@ -171,20 +171,20 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
+filextype *.pdf evince %c %i &, apvlv %c, xpdf %c
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
-        \ {View in zathura}
-        \ zathura %f,
+        \ {View in evince}
+        \ evince %f,
         \ {View in gv}
         \ gv %c %i &,
 
 " Djvu
 filextype *.djvu
-        \ {View in zathura}
-        \ zathura %f,
+        \ {View in evince}
+        \ evince %f,
         \ {View in apvlv}
         \ apvlv %f,
 

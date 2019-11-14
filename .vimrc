@@ -99,3 +99,7 @@ let g:vue_pre_processors=[]
 let g:instant_markdown_slow=1
 let g:instant_markdown_autostart=0
 let g:instant_markdown_mathjax = 1
+
+" set prolog syntax when opening a .pl file
+" autocmd BufNewFile,BufRead *.pl set syntax=prolog
+let g:filetype_pl="prolog"

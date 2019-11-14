@@ -123,8 +123,9 @@ alias uqamFn="cd ~/School/2019/fall/Functional"
 alias uqamOs="cd ~/School/2019/fall/Os"
 alias uqamStats="cd ~/School/2019/fall/Stats"
 alias uqamTele="cd ~/School/2019/fall/Telecom"
-alias dotfiles="cd ~/.dotfiles"
+alias dotfiles="cd ~/dotfiles"
 alias xresconfig="vim ~/.Xresources"
+alias vifmconfig="vim ~/.config/vifm/vifmrc"
 # alias cd="cd && ls"
 #
 
@@ -133,4 +134,4 @@ SPACESHIP_BATTERY_SHOW=always
 
 # zsh-syntax-highlighting
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-
+setopt +o nomatch
