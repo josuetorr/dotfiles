@@ -420,3 +420,7 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+# Changing screenlayout
+bindsym $mod+Shift+Ctrl+1 exec ~/dotfiles/scripts/original.sh
+bindsym $mod+Shift+Ctrl+2 exec ~/dotfiles/scripts/home.sh
