@@ -5,11 +5,15 @@
 export ZSH="/home/josue/.oh-my-zsh"
 
 # Path to jdk
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+export JAVA_HOME=/usr/lib/jvm/java-13-openjdk
 export PATH=$PATH:$JAVA_HOME
 
 # Path to SNAP
 export PATH=$PATH:/snap/bin/
+
+# Path to SableCC
+export SABLECC=/home/josue/sablecc/destination/bin
+export PATH=$SABLECC:$PATH
  
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,10 +123,10 @@ alias i3bkconfig="vim ~/.config/i3/i3blocks.conf"
 alias gogh='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 alias DL="cd ~/Downloads"
 alias persweb="cd ~/Projects/personal-website"
-alias uqamFn="cd ~/School/2019/fall/Functional"
-alias uqamOs="cd ~/School/2019/fall/Os"
-alias uqamStats="cd ~/School/2019/fall/Stats"
-alias uqamTele="cd ~/School/2019/fall/Telecom"
+alias uqamAi="cd ~/School/2020/ai"
+alias uqamAlgo="cd ~/School/2020/algo"
+alias uqamLang="cd ~/School/2020/lang"
+alias uqamArch="cd ~/School/2020/architecture"
 alias dotfiles="cd ~/dotfiles"
 alias xresconfig="vim ~/.Xresources"
 alias vifmconfig="vim ~/.config/vifm/vifmrc"
