@@ -114,12 +114,11 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias i3config="vim ~/.config/i3/config"
 alias zshconfig="vim ~/.zshrc"
 alias bashconfig="vim ~/.bashrc"
 alias vimconfig="vim ~/.vimrc"
 alias tmuxconfig="vim ~/.tmux.conf"
-alias i3config="vim ~/.i3/config"
-alias i3bkconfig="vim ~/.config/i3/i3blocks.conf"
 alias gogh='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 alias DL="cd ~/Downloads"
 alias persweb="cd ~/Projects/personal-website"
@@ -127,8 +126,9 @@ alias uqamAi="cd ~/School/2020/ai"
 alias uqamAlgo="cd ~/School/2020/algo"
 alias uqamLang="cd ~/School/2020/lang"
 alias uqamArch="cd ~/School/2020/architecture"
-alias dotfiles="cd ~/dotfiles"
+alias dotfiles="cd ~/.dotfiles"
 alias xresconfig="vim ~/.Xresources"
+alias xsessconfig="vim ~/.xsession"
 alias vifmconfig="vim ~/.config/vifm/vifmrc"
 # alias cd="cd && ls"
 #
