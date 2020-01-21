@@ -115,6 +115,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias i3config="vim ~/.config/i3/config"
+alias i3blocksconfig="vim ~/.config/i3blocks/config"
 alias zshconfig="vim ~/.zshrc"
 alias bashconfig="vim ~/.bashrc"
 alias vimconfig="vim ~/.vimrc"

@@ -31,7 +31,7 @@ floating_modifier $mod
 
 # start oa terminal
 set $terminal st
-bindsym $mod+Return exec $terminal
+bindsym $mod+Return exec --no-startup-id $terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -68,10 +68,11 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym mod1+h split h
+# bindsym mod1+h split h
 
 # split in vertical orientation
-bindsym mod1+v split v
+# bindsym mod1+v split v
+bindsym $mod+t split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -145,16 +146,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -169,23 +170,61 @@ bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
 
-# Locking i3
-bindsym $mod+Shift+x exec i3lock
 
 # Assign apps to predetermined workspaces
 assign [class="Firefox"] $ws2
 assign [class="Thunderbird"] $ws3
 
 # Common used apps keybindings
-bindsym $mod+Shift+b exec firefox
+bindsym $mod+Shift+b exec --no-startup-id firefox
+bindsym $mod+Shift+f exec --no-startup-id $terminal -e vifm
 
 # Autostart apps
-exec_always feh --bg-scale ~/Pictures/wallpapers/ultra_instinct.png
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/ultra_instinct.png
+exec --no-startup-id nm-applet
 
+# Keyboard layouts
+bindsym $mod+Ctrl+u exec "setxkbmap -layout us"
+bindsym $mod+Ctrl+c exec "setxkbmap -layout ca"
+
+# =====================
 # APPEREANCE SETTINGS
+
+# Color variables
+#
+set $bg-color               #8b26af
+set $bar-bg-color           #2f343f
+set $inactive-bg-color      #2f343f
+set $text-color             #f3f4f5
+set $inactive-text-color    #a8a8a8
+set $urgent-bg-color        #30c9a0
+set $indicator-color        #26af8b
+
+# Window colors
+#
+# class                     border              background          text                    indicator
+client.focused              $bg-color           $bg-color           $text-color             $indicator-color
+client.unfocused            $inactive-bg-color  $inactive-bg-color  $inactive-text-color    $indicator-color
+client.focused_inactive     $inactive-bg-color  $inactive-bg-color  $inactive-text-color    $indicator-color
+client.urgent               $urgent-bg-color    $urgent-bg-color    $text-color             $indicator-color
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks
+        position top
+        colors {
+            background $bar-bg-color
+            # class                     border              background          text
+            focused_workspace           $bg-color           $bg-color           $text-color
+            inactive_workspace          $inactive-bg-color  $bg-color           $text-color
+            urgent_workspace            $urgent-bg-color    $urgent-bg-color    $text-color
+            
+        }
 }
+
+# Locking i3
+bindsym $mod+Shift+x exec i3lock --color "$bg-color"
+#
+# ===============================================
+
