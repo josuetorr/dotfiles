@@ -1,19 +1,26 @@
 #  If you come from bash you might have to change your $PATH.
- export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/josue/.oh-my-zsh"
 
 # Path to jdk
-export JAVA_HOME=/usr/lib/jvm/java-13-openjdk
-export PATH=$PATH:$JAVA_HOME
+# export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+# export PATH=$PATH:$JAVA_HOME
+path+=(/usr/lib/jvm/java-11-openjdk-amd64)
 
 # Path to SNAP
-export PATH=$PATH:/snap/bin/
+# export PATH=$PATH:/snap/bin
+path+=(/snap/bin)
 
 # Path to SableCC
-export SABLECC=/home/josue/sablecc/destination/bin
-export PATH=$SABLECC:$PATH
+# export SABLECC=/home/josue/sablecc/destination/bin
+# export PATH=$PATH:$SABLECC
+path+=(~/sablecc/destionation/bin)
+
+typeset -U path
+export PATH
+
  
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
