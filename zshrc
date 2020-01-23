@@ -5,18 +5,21 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="/home/josue/.oh-my-zsh"
 
 # Path to jdk
-# export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-# export PATH=$PATH:$JAVA_HOME
-path+=(/usr/lib/jvm/java-11-openjdk-amd64)
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME
+# path+=(/usr/lib/jvm/java-11-openjdk-amd64)
 
 # Path to SNAP
-# export PATH=$PATH:/snap/bin
-path+=(/snap/bin)
+export PATH=$PATH:/snap/bin
+# path+=(/snap/bin)
 
 # Path to SableCC
-# export SABLECC=/home/josue/sablecc/destination/bin
-# export PATH=$PATH:$SABLECC
-path+=(~/sablecc/destionation/bin)
+export SABLECC=/home/josue/sablecc/destination/bin
+export PATH=$PATH:$SABLECC
+# path+=(~/sablecc/destionation/bin)
+
+# Path to personal scripts
+export PATH=$PATH:~/.dotfiles/scripts
 
 typeset -U path
 export PATH
