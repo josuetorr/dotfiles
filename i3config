@@ -169,12 +169,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Volume controls
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
-bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
-
-
 # Assign apps to predetermined workspaces
 assign [class="Firefox"] $ws2
 assign [class="thunderbird"] $ws3
@@ -185,7 +179,14 @@ bindsym $mod+Shift+t exec --no-startup-id thunderbird
 bindsym $mod+Shift+f exec --no-startup-id $terminal -e vifm
 bindsym $mod+Shift+z exec --no-startup-id zeal
 bindsym $mod+Shift+i exec --no-startup-id intellij-idea-community
+
+# System settings (volume, brightness, screenshot, etc.)
 bindsym Print exec scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshots/'
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
+bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
 
 # Autostart apps
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/ultra_instinct.png
