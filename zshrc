@@ -29,7 +29,14 @@ export PATH
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
+
+# Set firefox as default browser
+BROWSER="firefox"
+
+# Sweet welcome message   
+# figlet -f bubble "LIVE HERE AND NOW" | lolcat
+livehereandnow | lolcat
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -145,7 +152,12 @@ alias vifmconfig="vim ~/.config/vifm/vifmrc"
 #
 
 # Spaceship theme settings
-SPACESHIP_BATTERY_SHOW=always
+# SPACESHIP_CHAR_SYMBOL=" :: "
+SPACESHIP_BATTERY_SHOW=false
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_HOST_SHOW=true
+SPACESHIP_VI_MODE_INSERT=""
+SPACESHIP_VI_MODE_NORMAL="(N)"
 
 # zsh-syntax-highlighting
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
