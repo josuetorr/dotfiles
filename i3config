@@ -107,23 +107,26 @@ bindsym $mod+equal scratchpad show
 # HDMI and built-in screen variables
 set $hdmi HDMI1
 set $builtinscreen eDP1
+
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 " dev " 
-set $ws2 " www "
-set $ws3 " email " 
-set $ws4 " 4 "
-set $ws5 " 5 "
-set $ws6 " 6 "
-set $ws7 " 7 "
-set $ws8 " 8 "
-set $ws9 " 9 "
-set $ws10 " 10 "
+set $ws1 "1: DEV " 
+set $ws2 "2: WWW "
+set $ws3 "3: EMAIL " 
+set $ws4 "4: CLASS "
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # set workspace to specific monitors
 workspace $ws1 output $hdmi $builtinscreen
 workspace $ws2 output $hdmi $builtinscreen
 workspace $ws3 output $builtinscreen
+workspace $ws4 output $builtinscreen
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1 
@@ -196,8 +199,7 @@ bindsym $mod+Shift+z exec --no-startup-id zeal
 bindsym $mod+Shift+i exec --no-startup-id intellij-idea-community
 
 # utilities keybindings
-bindsym Print exec scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshots/'
-bindsym $mod+p exec "notify-send Hello" output $hdmi $builtinscreen
+bindsym Print exec scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshots/'; exec "notify-send Screenshot done!"
 
 # System settings (volume, brightness, screenshot, etc.)
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
@@ -244,6 +246,8 @@ client.urgent               $urgent-bg-color    $urgent-bg-color    $text-color 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        # Remove workspace numbers
+        strip_workspace_numbers yes
         status_command i3blocks
         position top
         colors {

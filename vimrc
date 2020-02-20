@@ -11,11 +11,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug '907th/vim-auto-save'
-Plug 'tpope/vim-surround'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'posva/vim-vue'
@@ -66,6 +66,12 @@ nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 nnoremap tc :tabclose<CR>
 
+" Moving through vim splits
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-l> <C-W>l
+
 " Vim-airline settings
 " ====================
 " Theme -> deus
@@ -77,6 +83,7 @@ let g:airline#extensions#hunks#enabled=1
 " =================
 " Show hidden files
 let NERDTreeShowHidden=1
+map <C-f> :NERDTreeToggle<CR>
 
 " Vim-JavaScript settings
 " =======================
@@ -103,3 +110,4 @@ let g:instant_markdown_mathjax = 1
 " set prolog syntax when opening a .pl file
 " autocmd BufNewFile,BufRead *.pl set syntax=prolog
 let g:filetype_pl="prolog"
+
