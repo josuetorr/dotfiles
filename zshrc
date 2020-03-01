@@ -10,7 +10,8 @@ export PATH=$PATH:$JAVA_HOME
 # path+=(/usr/lib/jvm/java-11-openjdk-amd64)
 
 # Path to SNAP
-export PATH=$PATH:/snap/bin
+export SNAP=/snap/bin
+export PATH=$PATH:$SNAP
 # path+=(/snap/bin)
 
 # Path to SableCC

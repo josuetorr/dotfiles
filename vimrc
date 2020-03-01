@@ -22,7 +22,6 @@ Plug 'posva/vim-vue'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-"Plug 'powerline/powerline'
 call plug#end()
 
 " Enable auto-save on startup
@@ -66,6 +65,10 @@ nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 nnoremap tc :tabclose<CR>
 
+" Splits settings
+set splitbelow
+set splitright
+
 " Moving through vim splits
 map <C-h> <C-W>h
 map <C-j> <C-W>j
@@ -74,8 +77,8 @@ map <C-l> <C-W>l
 
 " Vim-airline settings
 " ====================
-" Theme -> deus
-let g:airline_theme='deus'
+let g:airline_theme="shades_of_purple"
+let g:shades_of_purple_airline=1
 " show git branch
 let g:airline#extensions#hunks#enabled=1
 
