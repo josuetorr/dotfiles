@@ -229,13 +229,13 @@ bindsym $mod+period exec "~/.dotfiles/scripts/home.sh && pacmd set-card-profile 
 
 # Color variables
 #
-set $bg-color               #8b26af
+set $bg-color               #8b69be
 set $bar-bg-color           #2f343f
 set $inactive-bg-color      #2f343f
 set $text-color             #f3f4f5
 set $inactive-text-color    #a8a8a8
-set $urgent-bg-color        #30c9a0
-set $indicator-color        #26af8b
+set $urgent-bg-color        #3f83db
+set $indicator-color        #3f83db
 
 # Window colors
 #
