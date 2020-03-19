@@ -204,9 +204,9 @@ bindsym Print exec scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshot
 # System settings (volume, brightness, screenshot, etc.)
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
-bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
+bindsym XF86AudioRaiseVolume exec "amixer sset Master 5%+"
+bindsym XF86AudioLowerVolume exec "amixer sset Master 5%-"
+bindsym XF86AudioMute exec "amixer sset Master toggle"
 
 # Autostart apps
 exec_always dunst # notification deamon
@@ -218,9 +218,11 @@ exec_always compton -b
 bindsym $mod+Ctrl+u exec "setxkbmap -layout us"
 bindsym $mod+Ctrl+c exec "setxkbmap -layout ca"
 
-# Screen layout
-bindsym $mod+comma exec "~/.dotfiles/scripts/original.sh"
-bindsym $mod+period exec "~/.dotfiles/scripts/home.sh"
+# Screen layout + sound profile
+set $hdmi-audio output:hdmi-stereo
+set $laptop-audio output:analog-stereo+input:analog-stereo
+bindsym $mod+comma exec "~/.dotfiles/scripts/original.sh && pacmd set-card-profile 0 $laptop-audio"
+bindsym $mod+period exec "~/.dotfiles/scripts/home.sh && pacmd set-card-profile 0 $hdmi-audio"
 
 # =====================
 # APPEREANCE SETTINGS

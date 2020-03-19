@@ -7,6 +7,8 @@ endif
 
 " vim-plug plugin manager
 call plug#begin('~/.vim/plugged')
+" Plug 'rrethy/vim-hexokinase', {'do': 'make hexokinase'} will add once I need
+" to use golang
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
@@ -16,6 +18,7 @@ Plug 'mattn/emmet-vim'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'posva/vim-vue'
@@ -75,12 +78,21 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 
+" Setting folds
+set foldenable
+" Save folds
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
+
+" Enable modify file directory
+set ma
+
 " Vim-airline settings
 " ====================
 let g:airline_theme="shades_of_purple"
 let g:shades_of_purple_airline=1
 " show git branch
-let g:airline#extensions#hunks#enabled=1
+let g:airline#extensions#hunks#enabled=0
 
 " NERDTree settings
 " =================

@@ -149,6 +149,7 @@ alias dotfiles="cd ~/.dotfiles"
 alias xresconfig="vim ~/.Xresources"
 alias xsessconfig="vim ~/.xsession"
 alias vifmconfig="vim ~/.config/vifm/vifmrc"
+alias ggraph="git log --all --oneline --decorate --graph"
 # alias cd="cd && ls"
 #
 
