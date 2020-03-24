@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-/* xrb -merge .Xresources */
+# /* xrb -merge .Xresources */
 
 while true; do
     xsetroot -name "$( date + "%F %I:%M %p")"
@@ -8,3 +8,5 @@ while true; do
 done &
 
 exec dwm
+
+feh --bg-scale ~/Pictures/wallpapers/ultra_instinct.png

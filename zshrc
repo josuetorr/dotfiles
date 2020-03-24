@@ -35,6 +35,9 @@ ZSH_THEME="spaceship"
 # Set firefox as default browser
 BROWSER="firefox"
 
+# Set home folder for config files
+XDG_CONFIG_HOME="~/.config"
+
 # Sweet welcome message   
 # figlet -f bubble "LIVE HERE AND NOW" | lolcat
 livehereandnow | lolcat
