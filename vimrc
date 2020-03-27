@@ -9,7 +9,9 @@ endif
 call plug#begin('~/.vim/plugged')
 " Plug 'rrethy/vim-hexokinase', {'do': 'make hexokinase'} will add once I need
 " to use golang
+Plug 'wincent/terminus'
 Plug 'vim-airline/vim-airline'
+Plug 'kovetskiy/sxhkd-vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug '907th/vim-auto-save'
@@ -126,3 +128,5 @@ let g:instant_markdown_mathjax = 1
 " autocmd BufNewFile,BufRead *.pl set syntax=prolog
 let g:filetype_pl="prolog"
 
+" Use system clipboard
+set clipboard=unnamedplus

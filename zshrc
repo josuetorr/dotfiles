@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/josue/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Path to jdk
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
@@ -33,12 +33,17 @@ export PATH
 ZSH_THEME="spaceship"
 
 # Set firefox as default browser
-BROWSER="firefox"
+export BROWSER="firefox"
+
+# Set Terminal
+export TERMINAL="st"
+
+# set editor
+export EDITOR="vim"
 
 # Set home folder for config files
-XDG_CONFIG_HOME="~/.config"
+export XDG_CONFIG_HOME=$HOME/.config
 
-# Sweet welcome message   
 # figlet -f bubble "LIVE HERE AND NOW" | lolcat
 livehereandnow | lolcat
 
@@ -107,7 +112,6 @@ plugins=(
     tmux
     zsh-syntax-highlighting
     zsh-autosuggestions
-    vi-mode
     )
 
 source $ZSH/oh-my-zsh.sh
@@ -152,6 +156,8 @@ alias dotfiles="cd ~/.dotfiles"
 alias xresconfig="vim ~/.Xresources"
 alias xsessconfig="vim ~/.xsession"
 alias vifmconfig="vim ~/.config/vifm/vifmrc"
+alias xinitconfig="vim ~/.xinitrc"
+alias sxhkdconfig="vim ~/.config/sxhkd/sxhkdrc"
 alias ggraph="git log --all --oneline --decorate --graph"
 # alias cd="cd && ls"
 #
@@ -167,3 +173,37 @@ SPACESHIP_VI_MODE_NORMAL="(N)"
 # zsh-syntax-highlighting
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 setopt +o nomatch
+
+# Vi binding
+bindkey -v
+# Remove mode switching delay.
+KEYTIMEOUT=5
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+   if [[ ${KEYMAP} == vicmd ]] ||
+      [[ $1 = 'block' ]]; then
+        echo -ne '\e[1 q'
+
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+        echo -ne '\e[5 q'
+  fi
+}
+
+zle -N zle-keymap-select
+
+# Use beam shape cursor on startup.
+# echo -ne '\e[5 q'
+
+# Use beam shape cursor for each new prompt.
+_fix_cursor() {
+    echo -ne '\e[5 q'
+}
+
+precmd_functions+=(_fix_cursor)
+# preexec() {
+#     echo -ne '\e[5 q'
+# }
