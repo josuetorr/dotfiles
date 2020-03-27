@@ -9,3 +9,4 @@ setup zsh & vim
 install compositor
 set backlight
 setup sxhkd
+setup a lockscreen (slock)

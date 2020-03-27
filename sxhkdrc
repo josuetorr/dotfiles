@@ -20,8 +20,16 @@ super + d
 
 # Screenshots
 Print
-    scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshots/'
+    scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshots/'; notify-send "Screenshot done!"
 
 # vifm
 super + shift + v
     $TERMINAL -e vifm
+
+# Shutdown, reboot, suspend prompt
+super + shift + Return
+    exitprompt
+
+# Set keyboard layout
+super + shift + k
+    kblayouts.sh

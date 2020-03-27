@@ -1,0 +1,9 @@
+#!/bin/sh
+
+x=$(echo "shutdown\nreboot\nsleep" | dmenu -p "Exiting...")
+
+case $x in
+    shutdown) systemctl shutdown;;
+    reboot) systemctl reboot;;
+    sleep) systemctl suspend;;
+esac
