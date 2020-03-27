@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# echo -n is not posix compliant
 delim=" | "
 
 rmnl()
@@ -24,14 +25,14 @@ getbattery()
 
 printstatus()
 {
+    echo -n " "
     getvolume
     echo -n "$delim"
     getbattery
     echo -n "$delim"
     getdate
+    echo -n " "
 }
 
 # print padding
-echo -n " "
-printstatus
-echo -n " "
+xsetroot -name "$(printstatus)"

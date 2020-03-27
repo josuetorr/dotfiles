@@ -8,7 +8,7 @@ compton -b &
 sxhkd &
 
 # set status bar
-while :; do
-    xsetroot -name "$(statusdwm.sh)"
+while true ; do
+    statusdwm.sh
     sleep 1m
 done
