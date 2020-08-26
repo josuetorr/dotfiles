@@ -31,5 +31,9 @@ super + shift + Return
     exitprompt
 
 # Set keyboard layout
-super + shift + k
+super + shift + space
     kblayouts.sh
+
+# Monitor layouts
+super + shift + m
+    monselect.sh

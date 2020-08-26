@@ -10,3 +10,4 @@ install compositor
 set backlight
 setup sxhkd
 setup a lockscreen (slock)
+setup bluetooth

@@ -5,7 +5,7 @@ delim=" | "
 
 rmnl()
 {
-    tr "\n" "\0"
+tr "\n" "\0"
 }
 
 getdate()
@@ -15,12 +15,24 @@ getdate()
 
 getvolume()
 {
-    [ -z "$(amixer get Master | grep -o "\[off\]")" ] && echo -n "VOL $(amixer get Master | grep -o "[0-9]*%")" || echo -n "MUTE"
+    [ -z "$(amixer get Master | grep -o "\[off\]")" ] && echo -n "VOL $(amixer get Master | grep "Front Left" | grep -o "[0-9]*%")" || echo -n "MUTE"
 }
 
 getbattery()
 {
-    echo -n "BAT $(cat /sys/class/power_supply/BAT0/capacity)%"
+    charging="$(cat /sys/class/power_supply/BAT0/status)"
+    capacity="$(cat /sys/class/power_supply/BAT0/capacity)"
+    if [ $charging = "Charging" ]; then
+        echo -n "BAT $capacity % (CHR)"
+    else
+        echo -n "BAT $capacity %"
+    fi
+    
+    if [ $capacity = "20" ]; then
+        notify-send "Battery running low: $capacity %"
+    elif [ $capacity = "10" ]; then
+        notify-send "Battery running low: $capacity %"
+    fi
 }
 
 printstatus()

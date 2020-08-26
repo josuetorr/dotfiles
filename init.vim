@@ -1,17 +1,20 @@
-" automate plug installation
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+" " automate plug installation
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+ endif
 
 " vim-plug plugin manager
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 " Plug 'rrethy/vim-hexokinase', {'do': 'make hexokinase'} will add once I need
 " to use golang
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
+Plug 'unblevable/quick-scope'
 Plug 'wincent/terminus'
 Plug 'vim-airline/vim-airline'
-Plug 'kovetskiy/sxhkd-vim'
+Plug 'kovetskiy/sxhkd-vim' "sxhkd syntax highlighting
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug '907th/vim-auto-save'
@@ -24,9 +27,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'posva/vim-vue'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'ap/vim-css-color' " might remove it
 call plug#end()
 
 " Enable auto-save on startup
@@ -36,6 +41,9 @@ let g:auto_save_write_all_buffers=1
 
 " In no compatible mode
 set nocompatible
+
+" No backup
+set nobackup
 
 "Set the line number visible
 set number relativenumber
@@ -82,9 +90,6 @@ map <C-l> <C-W>l
 
 " Setting folds
 set foldenable
-" Save folds
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
 
 " Enable modify file directory
 set ma
@@ -95,6 +100,11 @@ let g:airline_theme="shades_of_purple"
 let g:shades_of_purple_airline=1
 " show git branch
 let g:airline#extensions#hunks#enabled=0
+
+" Quick-scope settings
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+" highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 
 " NERDTree settings
 " =================
@@ -128,5 +138,18 @@ let g:instant_markdown_mathjax = 1
 " autocmd BufNewFile,BufRead *.pl set syntax=prolog
 let g:filetype_pl="prolog"
 
-" Use system clipboard
-set clipboard=unnamedplus
+" set mustache syntax to html color
+let g:filetype_mst="html"
+
+" COC settings
+let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-emmet', 'coc-tslint', 'coc-prettier']
+let g:coc_disable_startup_warning = 1
+
+" Tmux settings for cursor change on VI-mode
+if exists('$TMUX')
+    let &t_SI .= "\ePtmux;\e\e[=1c\e\\"
+    let &t_EI .= "\ePtmux;\e\e[=2c\e\\"
+ else
+    let &t_SI .= "\e[=1c"
+    let &t_EI .= "\e[=2c"
+ endif

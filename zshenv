@@ -15,13 +15,16 @@ export PATH=$PATH:$SNAP
 # path+=(/snap/bin)
 
 # Path to SableCC
-export SABLECC=/home/josue/sablecc/destination/bin
+export SABLECC=/home/josue/sablecc-3.7/bin
 export PATH=$PATH:$SABLECC
 # path+=(~/sablecc/destionation/bin)
 
 # Path to personal scripts
 export PATH=$PATH:~/.dotfiles/scripts
-#
+
+# Path to android studio
+export PATH=$PATH:~/android-studio/bin
+
 # Set firefox as default browser
 export BROWSER="firefox"
 
