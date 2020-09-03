@@ -15,10 +15,13 @@ Plug 'unblevable/quick-scope'
 Plug 'wincent/terminus'
 Plug 'vim-airline/vim-airline'
 Plug 'kovetskiy/sxhkd-vim' "sxhkd syntax highlighting
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug '907th/vim-auto-save'
 Plug 'pangloss/vim-javascript'
+Plug 'chemzqm/vim-jsx-improve'
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'mattn/emmet-vim'
 Plug 'dracula/vim',{'as':'dracula'}
 Plug 'tpope/vim-commentary'
@@ -27,17 +30,17 @@ Plug 'tpope/vim-fugitive'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'posva/vim-vue'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'ap/vim-css-color' " might remove it
 call plug#end()
 
 " Enable auto-save on startup
 " Auto-save on all buffers
-let g:auto_save=1
-let g:auto_save_write_all_buffers=1
+" let g:auto_save=1
+" let g:auto_save_write_all_buffers=1
 
 " In no compatible mode
 set nocompatible
@@ -70,6 +73,10 @@ set t_Co=256
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
+" Splits settings
+set splitbelow
+set splitright
+
 " Tabs shortcuts
 nnoremap tn :tabnew<Space>
 nnoremap tk :tabnext<CR>
@@ -78,15 +85,15 @@ nnoremap th :tabfirst<CR>
 nnoremap tl :tablast<CR>
 nnoremap tc :tabclose<CR>
 
-" Splits settings
-set splitbelow
-set splitright
-
 " Moving through vim splits
-map <C-h> <C-W>h
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-l> <C-W>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+
+" FZF map
+noremap <C-p> :FZF<CR>
+
 
 " Setting folds
 set foldenable
@@ -130,9 +137,9 @@ let g:haskell_backpack=1                " to enable highlighting of backpack key
 let g:vue_pre_processors=[]
 
 " instant-markdown configs
-let g:instant_markdown_slow=1
-let g:instant_markdown_autostart=0
-let g:instant_markdown_mathjax = 1
+" let g:instant_markdown_slow=1
+" let g:instant_markdown_autostart=0
+" let g:instant_markdown_mathjax = 1
 
 " set prolog syntax when opening a .pl file
 " autocmd BufNewFile,BufRead *.pl set syntax=prolog
@@ -142,8 +149,11 @@ let g:filetype_pl="prolog"
 let g:filetype_mst="html"
 
 " COC settings
-let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-emmet', 'coc-tslint', 'coc-prettier']
-let g:coc_disable_startup_warning = 1
+let g:coc_global_extensions = ['coc-prettier', 'coc-json', 'coc-tsserver', 'coc-emmet', 'coc-tslint']
+
+" Enable Prettier on save
+let g:prettier#single_quote = 1
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
 " Tmux settings for cursor change on VI-mode
 if exists('$TMUX')

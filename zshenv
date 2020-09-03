@@ -25,6 +25,9 @@ export PATH=$PATH:~/.dotfiles/scripts
 # Path to android studio
 export PATH=$PATH:~/android-studio/bin
 
+# npm global PATH
+export PATH=~/.config/npm-global/bin:$PATH
+
 # Set firefox as default browser
 export BROWSER="firefox"
 

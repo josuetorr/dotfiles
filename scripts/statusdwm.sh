@@ -28,11 +28,11 @@ getbattery()
         echo -n "BAT $capacity %"
     fi
     
-    if [ $capacity = "20" ]; then
-        notify-send "Battery running low: $capacity %"
-    elif [ $capacity = "10" ]; then
-        notify-send "Battery running low: $capacity %"
-    fi
+    # if [ $capacity = "20" ]; then
+    #     notify-send "Battery running low: $capacity %"
+    # elif [ $capacity = "10" ]; then
+    #     notify-send "Battery running low: $capacity %"
+    # fi
 }
 
 printstatus()
