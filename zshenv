@@ -23,13 +23,20 @@ export PATH=$PATH:$SABLECC
 export PATH=$PATH:~/.dotfiles/scripts
 
 # Path to android studio
-export PATH=$PATH:~/android-studio/bin
+export ANDROID_STUDIO_ROOT=/usr/local/android-studio
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 
 # npm global PATH
 export PATH=~/.config/npm-global/bin:$PATH
 
+# local bin
+export PATH=$PATH:~/.local/bin
+
 # Set firefox as default browser
-export BROWSER="firefox"
+export BROWSER="brave-browser"
 
 # Set Terminal
 export TERMINAL="st"

@@ -3,6 +3,7 @@
 # set wallpaper
 feh --bg-scale ~/Pictures/wallpapers/ultra_instinct.png
 
+# qtile &
 dwm &
 compton -b &
 dunst &
