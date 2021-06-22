@@ -27,6 +27,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'mattn/emmet-vim'
 Plug 'dracula/vim',{'as':'dracula'}
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'artanikin/vim-synthwave84'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -71,18 +73,18 @@ set hls
 " enable 14but true color
 " set termguicolors
 
-"Color theme set to dracula
+"Color theme 
 syntax on
 set t_Co=256
 colorscheme dracula
-"
+set background=dark
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " Vim-airline settings
 " ====================
 let g:airline_theme="shades_of_purple"
 let g:shades_of_purple_airline=1
 " show git branch
 let g:airline#extensions#hunks#enabled=0
-" set background=dark
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 

@@ -35,8 +35,9 @@ export PATH=~/.config/npm-global/bin:$PATH
 # local bin
 export PATH=$PATH:~/.local/bin
 
-# Set firefox as default browser
-export BROWSER="brave-browser"
+# Set default browser
+# export BROWSER="brave-browser"
+export BROWSER="firefox"
 
 # Set Terminal
 export TERMINAL="st"
