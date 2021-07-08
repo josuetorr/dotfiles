@@ -71,11 +71,11 @@ set cursorline
 set hls
 
 " enable 14but true color
-" set termguicolors
+set termguicolors
 
 "Color theme 
 syntax on
-set t_Co=256
+" set t_Co=256
 colorscheme dracula
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
