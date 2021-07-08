@@ -70,7 +70,7 @@ set cursorline
 " Set search highlighting
 set hls
 
-" enable 14but true color
+" enable 14bit true color
 set termguicolors
 
 "Color theme 

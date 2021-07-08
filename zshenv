@@ -40,7 +40,7 @@ export PATH=$PATH:~/.local/bin
 export BROWSER="firefox"
 
 # Set Terminal
-export TERMINAL="st"
+export TERMINAL="alacritty"
 
 # set editor
 export EDITOR="vim"
