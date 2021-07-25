@@ -1,31 +1,3 @@
-# #  If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# # Path to your oh-my-zsh installation.
-# export ZSH=$HOME/.oh-my-zsh
-
-# # Path to jdk
-# export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-# export PATH=$PATH:$JAVA_HOME
-# # path+=(/usr/lib/jvm/java-11-openjdk-amd64)
-
-# # Path to SNAP
-# export SNAP=/snap/bin
-# export PATH=$PATH:$SNAP
-# # path+=(/snap/bin)
-
-# # Path to SableCC
-# export SABLECC=/home/josue/sablecc/destination/bin
-# export PATH=$PATH:$SABLECC
-# # path+=(~/sablecc/destionation/bin)
-
-# # Path to personal scripts
-# export PATH=$PATH:~/.dotfiles/scripts
-
-# typeset -U path
-# export PATH
-
- 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -132,7 +104,7 @@ alias i3config="vim ~/.config/i3/config"
 alias i3blocksconfig="vim ~/.config/i3blocks/config"
 alias zshconfig="vim ~/.zshrc"
 alias bashconfig="vim ~/.bashrc"
-alias nvimconfig="vim ~/.dotfiles/init.vim"
+alias nvimconfig="vim ~/.dotfiles/nvim/init.vim"
 alias tmuxconfig="vim ~/.tmux.conf"
 alias gogh='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 alias DL="cd ~/Downloads"
