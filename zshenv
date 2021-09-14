@@ -3,6 +3,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+# Path to homebrew
+export PATH=/opt/homebrew/bin:$PATH
 
 # Path to jdk
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
