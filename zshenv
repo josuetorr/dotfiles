@@ -45,10 +45,17 @@ export BROWSER="firefox"
 export TERMINAL="alacritty"
 
 # set editor
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Set home folder for config files
 export XDG_CONFIG_HOME=$HOME/.config
+
+# Set dotfiles location
+export DOTFILES=$HOME/.dotfiles
+
+# Set vimrc path
+export MYVIMRC=$DOTFILES/nvim/init.lua
+export MYVIMRC_PARENT=$DOTFILES/nvim/
 
 typeset -U path
 export PATH
