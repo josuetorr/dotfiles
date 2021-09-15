@@ -2,8 +2,11 @@ local autocmds = require('utils/autocmd')
 
 local MYVIMRC_PARENT = vim.env.MYVIMRC_PARENT
 
+-- main source cmd
+local source_cmd = 'so %'
+
 -- source init.lua when changing a file in nvim's config
-local reload_vimrc_cmd = 'so % | echom "Reloaded nvim"'
+local reload_vimrc_cmd = source_cmd .. '| echom "Reloaded nvim"'
 autocmds.augroup {
   group = 'reload_vimrc',
   autocmds = {
