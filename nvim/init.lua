@@ -6,6 +6,13 @@
 --     \___/  |___/ |_| \_|  \_/  |___|_|  |_|  \____\___/|_| \_|_|   |___\____|
 --
 
-require('opt')
-require('maps')
-require('autocmds')
+require 'opt'
+require 'maps'
+require 'autocmds'
+require 'plugins'
+require 'plugins/treesitter'
+require 'plugins/lualine'
+require 'lsp/maps'
+require 'lsp/lspsaga'
+require 'lsp/diagnostics'
+

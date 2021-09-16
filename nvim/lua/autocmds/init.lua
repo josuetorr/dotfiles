@@ -6,10 +6,10 @@ local MYVIMRC_PARENT = vim.env.MYVIMRC_PARENT
 local source_cmd = 'so %'
 
 -- source init.lua when changing a file in nvim's config
-local reload_vimrc_cmd = source_cmd .. '| echom "Reloaded nvim"'
-autocmds.augroup {
-  group = 'reload_vimrc',
-  autocmds = {
-    { event = 'BufWritePost', pattern = MYVIMRC_PARENT .. '*', cmd = reload_vimrc_cmd},
-  },
-}
+-- local reload_vimrc_cmd = source_cmd .. '| echom "Reloaded nvim"'
+-- autocmds.augroup {
+--   group = 'reload_vimrc',
+--   autocmds = {
+--     { event = 'BufWritePost', pattern = MYVIMRC_PARENT .. '*', cmd = reload_vimrc_cmd},
+--   },
+-- }

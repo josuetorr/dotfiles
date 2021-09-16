@@ -22,9 +22,12 @@ o.splitright = true
 o.termguicolors = true
 
 -- color scheme
-g.colors_name = 'elflord'
+g.colors_name = 'dracula'
 g.syntax = true
 
 
 -- cursor line
 set.cursorline = true
+
+-- enable mouse controls
+set.mouse = 'a'
