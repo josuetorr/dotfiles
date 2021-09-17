@@ -12,7 +12,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<Space>p', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>', opts)
+  buf_set_keymap('n', '<Space>p', ':Neoformat<CR>', opts)
 
   -- attach nvim-completion
   require'completion'.on_attach(client, bufnr)

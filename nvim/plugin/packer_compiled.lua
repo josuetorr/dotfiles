@@ -73,9 +73,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/brain/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
-  dracula = {
+  ["dracula.nvim"] = {
     loaded = true,
-    path = "/Users/brain/.local/share/nvim/site/pack/packer/start/dracula"
+    path = "/Users/brain/.local/share/nvim/site/pack/packer/start/dracula.nvim"
   },
   ["emmet-vim"] = {
     loaded = true,
@@ -88,6 +88,14 @@ _G.packer_plugins = {
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/brain/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+  },
+  neoformat = {
+    loaded = true,
+    path = "/Users/brain/.local/share/nvim/site/pack/packer/start/neoformat"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/Users/brain/.local/share/nvim/site/pack/packer/start/nord.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -120,10 +128,6 @@ _G.packer_plugins = {
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/brain/.local/share/nvim/site/pack/packer/start/vim-commentary"
-  },
-  ["vim-polyglot"] = {
-    loaded = true,
-    path = "/Users/brain/.local/share/nvim/site/pack/packer/start/vim-polyglot"
   },
   ["vim-surround"] = {
     loaded = true,

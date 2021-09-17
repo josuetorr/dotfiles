@@ -15,4 +15,3 @@ require 'plugins/lualine'
 require 'lsp/maps'
 require 'lsp/lspsaga'
 require 'lsp/diagnostics'
-

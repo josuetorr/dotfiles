@@ -15,20 +15,17 @@ packer.init {
   }
 }
 
-local use = packer.use
+-- local use = packer.use
 
 ---- recommandation
 packer.reset()
 
 -- setting up plugins
-return packer.startup(function() 
+return packer.startup(function(use) 
   use {
     'wbthomason/packer.nvim',
     opt = false
   }
-
-  -- languages
-  use 'sheerun/vim-polyglot'
 
   -- utils
   use 'tpope/vim-surround'
@@ -36,11 +33,9 @@ return packer.startup(function()
   use 'mattn/emmet-vim'
 
   -- color schemes
-  use {
-       'dracula/vim',
-       as = 'dracula'
-  }
+  use 'Mofiqul/dracula.nvim'
   use 'artanikin/vim-synthwave84'
+  use 'shaunsingh/nord.nvim'
 
   -- better syntax highlighting
   use {
@@ -67,5 +62,8 @@ return packer.startup(function()
 
   -- status line
   use 'hoob3rt/lualine.nvim'
+
+  -- formatting
+  use 'sbdchd/neoformat'
 end
 )
