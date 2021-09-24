@@ -1,6 +1,5 @@
 local nvim_lsp = require 'lspconfig'
 
-nvim_lsp.diagnosticls.setup {
   nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
   filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
@@ -57,7 +56,6 @@ nvim_lsp.diagnosticls.setup {
       markdown = 'prettier',
     }
   }
-}
 }
 
 -- icon 
