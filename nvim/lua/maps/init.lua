@@ -47,3 +47,5 @@ keymap('n', 'K', '<cmd>Lspsaga hover_doc<CR>', opts_silent)
 keymap('i', '<C-k>', '<cmd>Lspsaga signature_help<CR>', opts_silent)
 keymap('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', opts_silent)
 
+-- toogle rose-pine theme
+keymap('n', '<C-n>', [[<cmd> lua require('rose-pine.functions').toggle_variant({'moon', 'base'})<cr>]], opts_silent)

@@ -22,7 +22,8 @@ o.splitright = true
 o.termguicolors = true
 
 -- color scheme
-g.colors_name = 'dracula'
+g.colors_name = 'rose-pine'
+g.rose_pine_variant = 'moon'
 g.syntax = true
 
 
