@@ -27,7 +27,7 @@ lualine.setup {
     lualine_c = {'filename'},
     lualine_x = {'location'},
     lualine_y = {},
-    ualine_z = {}
+    aline_z = {}
   },
   tabline = {},
   extensions = {'fugitive'}

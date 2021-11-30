@@ -1,17 +1,24 @@
---[[
-         _        _   ___     _____ __  __    ____ ___  _   _ _____ ___ ____
-        | ( )___  | \ | \ \   / /_ _|  \/  |  / ___/ _ \| \ | |  ___|_ _/ ___|
-     _  | |// __| |  \| |\ \ / / | || |\/| | | |  | | | |  \| | |_   | | |  _
-    | |_| | \__ \ | |\  | \ V /  | || |  | | | |__| |_| | |\  |  _|  | | |_| |
-     \___/  |___/ |_| \_|  \_/  |___|_|  |_|  \____\___/|_| \_|_|   |___\____|
---]]
+-- installing packer after cloning
+local execute = vim.api.nvim_command
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'site/pack/packer/start/packer.nvim'
 
+if fn.empty(fn.glob(install_path)) > 0 then
+	fn.system({ 'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path })
+	execute 'packadd packer.nvim'
+end
+
+-- general options
 require 'opt'
-require 'maps'
-require 'autocmds'
+
+-- keymaps
+require 'keymaps'
+
+-- plugins
 require 'plugins'
-require 'plugins/treesitter'
 require 'plugins/lualine'
-require 'lsp/maps'
+require 'plugins/treesitter'
+
+-- code completion
 require 'lsp/lspsaga'
-require 'lsp/diagnostics'
+require 'lsp/cmp-config'

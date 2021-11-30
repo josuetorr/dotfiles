@@ -15,34 +15,34 @@ packer.init {
   }
 }
 
--- local use = packer.use
-
----- recommandation
+-- recommendation
 packer.reset()
 
--- setting up plugins
-return packer.startup(function(use) 
-  use {
-    'wbthomason/packer.nvim',
-    opt = false
-  }
+return packer.startup(function(use)
+	use {
+		'wbthomason/packer.nvim'
+	}
 
-  -- utils
-  use 'tpope/vim-surround'
-  use 'tpope/vim-commentary'
-  use 'mattn/emmet-vim'
+	-- utils
+  	use 'tpope/vim-surround'
+  	use 'tpope/vim-commentary'
+  	use 'mattn/emmet-vim'
 
-  -- color schemes
-  use 'Mofiqul/dracula.nvim'
-  use 'artanikin/vim-synthwave84'
-  use 'shaunsingh/nord.nvim'
-  use 'rose-pine/neovim'
+	-- file explorer
+  	use {
+    		'kyazdani42/nvim-tree.lua',
+    		requires = 'kyazdani42/nvim-web-devicons',
+    		config = function() require'nvim-tree'.setup {} end
+  	}
 
-  -- better syntax highlighting
-  use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-  }
+  -- lsp
+  use 'tami5/lspsaga.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
 
   -- fuzzy finder
   use {
@@ -50,22 +50,17 @@ return packer.startup(function(use)
        requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- code completion / lsp
-  use 'neovim/nvim-lspconfig' 
-  use 'nvim-lua/completion-nvim'
-  use 'glepnir/lspsaga.nvim'
+  -- color schemes
+  use 'Mofiqul/dracula.nvim'
 
-  -- file explorer
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require'nvim-tree'.setup {} end
-  }
-
-  -- status line
+	-- status line
   use 'hoob3rt/lualine.nvim'
 
-  -- formatting
-  use 'sbdchd/neoformat'
+  -- better syntax highlighting
+  use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+  }
+
 end
 )

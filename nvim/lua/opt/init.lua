@@ -1,8 +1,11 @@
 local g = vim.g
-local o = vim.o
-local bo = vim.bo
 local wo = vim.wo
 local set = vim.opt
+local o = vim.o
+local cmd = vim.cmd
+
+-- basic options
+vim.wo.relativenumber = true
 
 -- tabs
 set.tabstop = 2
@@ -21,14 +24,10 @@ o.splitright = true
 -- true color
 o.termguicolors = true
 
--- color scheme
-g.colors_name = 'rose-pine'
-g.rose_pine_variant = 'moon'
-g.syntax = true
-
-
--- cursor line
 set.cursorline = true
 
--- enable mouse controls
+-- mouse control
 set.mouse = 'a'
+
+-- colorscheme
+cmd('colorscheme dracula')
