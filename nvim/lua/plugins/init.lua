@@ -1,7 +1,14 @@
+-- automatically install and set up packer
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+end
+
 local packer = require 'packer'
 
 packer.init {
---  opt_default = true, -- default to using opt (as opposed to start) plugins
+  --opt_default = true, -- default to using opt (as opposed to start) plugins
   display = {
     open_fn = require('packer.util').float, -- open window as floating
     working_sym = '🛠', -- symbol for a plugin being installed/updated
@@ -20,7 +27,8 @@ packer.reset()
 
 return packer.startup(function(use)
 	use {
-		'wbthomason/packer.nvim'
+		'wbthomason/packer.nvim',
+    opt = false,
 	}
 
 	-- utils
@@ -68,6 +76,12 @@ return packer.startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
   }
+
+   -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 
 end
 )
