@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/brain/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["format.nvim"] = {
+    loaded = true,
+    path = "/Users/brain/.local/share/nvim/site/pack/packer/start/format.nvim",
+    url = "https://github.com/lukas-reineke/format.nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/brain/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",

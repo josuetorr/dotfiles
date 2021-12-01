@@ -53,6 +53,9 @@ return packer.startup(function(use)
        requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- code formatter
+  use 'lukas-reineke/format.nvim'
+
   -- color schemes
   use 'Mofiqul/dracula.nvim'
   use 'shaunsingh/nord.nvim'

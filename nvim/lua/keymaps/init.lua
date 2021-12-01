@@ -39,3 +39,6 @@ keymap('n', 'gj', '<cmd>Lspsaga diagnostic_jump_next<CR>', opts_silent)
 keymap('n', 'gk', '<cmd>Lspsaga diagnostic_jump_prev<CR>', opts_silent)
 keymap('n', 'gx', '<cmd>Lspsaga code_action<CR>', opts_silent)
 keymap('n', 'gs', '<cmd>Lspsaga show_cursor_diagnostics<CR>', opts_silent)
+
+-- format file
+keymap('n', '<Space>p', ':Format<CR>', opts_silent)

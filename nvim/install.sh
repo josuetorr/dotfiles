@@ -9,8 +9,14 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 # brew install --HEAD neovim
 
 # install language servers
-
-# typescript
 npm install -g typescript typescript-language-server
 # eslint
 npm i -g stylelint-lsp
+#prettier
+npm i -g prettier
+# lua package manager
+brew install luarocks
+# lua formatter
+luarocks install --server=https://luarocks.org/dev luaformatter
+# python formatter
+brew install black
