@@ -37,7 +37,10 @@ return packer.startup(function(use)
 
   -- lsp
   use 'tami5/lspsaga.nvim'
-  use 'neovim/nvim-lspconfig'
+  use {
+    'neovim/nvim-lspconfig',
+    'williamboman/nvim-lsp-installer',
+  }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/nvim-cmp'
@@ -52,6 +55,7 @@ return packer.startup(function(use)
 
   -- color schemes
   use 'Mofiqul/dracula.nvim'
+  use 'shaunsingh/nord.nvim'
 
 	-- status line
   use 'hoob3rt/lualine.nvim'
