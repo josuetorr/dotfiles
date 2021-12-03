@@ -30,4 +30,4 @@ set.cursorline = true
 set.mouse = 'a'
 
 -- colorscheme
-cmd('colorscheme dracula')
+cmd('colorscheme moonlight')

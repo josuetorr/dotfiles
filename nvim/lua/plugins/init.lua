@@ -67,6 +67,7 @@ return packer.startup(function(use)
   -- color schemes
   use 'Mofiqul/dracula.nvim'
   use 'shaunsingh/nord.nvim'
+  use 'shaunsingh/moonlight.nvim'
 
 	-- status line
   use 'hoob3rt/lualine.nvim'
