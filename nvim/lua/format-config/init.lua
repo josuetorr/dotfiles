@@ -7,6 +7,9 @@ formatter.setup {
   css = {
     { cmd = { "prettier -w" } }
   },
+  scss = {
+    { cmd = { "prettier -w" } }
+  }, 
   json = {
     { cmd = { "prettier -w" } }
   },
