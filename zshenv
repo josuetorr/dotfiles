@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=/opt/homebrew/bin:$PATH
 
 # Path to jdk
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$PATH:$JAVA_HOME
 # path+=(/usr/lib/jvm/java-11-openjdk-amd64)
 
