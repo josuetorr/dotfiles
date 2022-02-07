@@ -1,17 +1,12 @@
--- plugins
-require 'plugins'
-require 'plugins/lualine'
-require 'plugins/treesitter'
-
--- code completion
-require 'lsp/lspsaga'
-require 'lsp/cmp-config'
-
--- code formatter
-require 'format-config'
-
--- general options
-require 'opt'
-
--- keymaps
-require 'keymaps'
+require 'user/opt'
+require 'user/keymaps'
+require 'user/plugins'
+require 'user/colorscheme'
+require 'user/cmp'
+require 'user/lsp'
+require 'user/telescope'
+require 'user/treesitter'
+require 'user/autopairs'
+require 'user/comments'
+require 'user/gitsigns'
+require 'user/nvimtree'
