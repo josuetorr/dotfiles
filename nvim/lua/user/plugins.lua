@@ -50,6 +50,7 @@ return packer.startup(function(use)
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "shaunsingh/moonlight.nvim"
+  use 'Mofiqul/dracula.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -102,6 +103,9 @@ return packer.startup(function(use)
 
   -- greeter (alpha)
   use 'goolord/alpha-nvim'
+
+  -- toggle terminals
+  use 'akinsho/toggleterm.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
