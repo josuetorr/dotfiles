@@ -90,6 +90,9 @@ return packer.startup(function(use)
   use 'numToStr/Comment.nvim'
   use 'JoosepAlviste/nvim-ts-context-commentstring' -- jsx comments
 
+  -- vim surround
+  use 'tpope/vim-surround'
+
   -- Git
   use "lewis6991/gitsigns.nvim"
 
