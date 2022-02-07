@@ -27,6 +27,7 @@ keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 -- navigate buffers (tabs)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "bd", ":Bdelete!<CR>", opts)
 
 -- file tree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
@@ -62,6 +63,9 @@ keymap('n', 'gd', ':Telescope lsp_definitions theme=ivy<CR>', opts)
 keymap('n', 'gi', ':Telescope lsp_implementations theme=ivy<CR>', opts)
 keymap('n', 'gx', ':Telescope lsp_code_actions theme=cursor<CR>', opts)
 keymap('n', 'gx', ':Telescope lsp_code_actions theme=cursor<CR>', opts)
+
+-- formatting
+keymap("n", "<Space>p", ":Format<cr>", opts)
 
 -- better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)

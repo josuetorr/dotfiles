@@ -67,10 +67,13 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+  use "ahmedkhalf/project.nvim"
 
   -- Treesitter
   use {
@@ -89,6 +92,16 @@ return packer.startup(function(use)
   -- NvimTree
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
+
+  -- Buffers
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
+
+  -- lualine
+  use 'nvim-lualine/lualine.nvim'
+
+  -- greeter (alpha)
+  use 'goolord/alpha-nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
