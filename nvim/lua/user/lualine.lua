@@ -43,7 +43,7 @@ local branch = {
 	icon = "",
 }
 
-local ocation = {
+local location = {
 	"location",
 	padding = 0,
 }
