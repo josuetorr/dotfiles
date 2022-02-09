@@ -1,7 +1,9 @@
-local colo = "dracula"
+local colo = "nord"
+
+vim.g.nord_contrast = true
 
 local status_ok, _ = pcall(vim.cmd, "colo " .. colo)
 if not status_ok then
-  vim.notify("colorscheme " .. colo .. " not found!")
-  return
+	vim.notify("colorscheme " .. colo .. " not found!")
+	return
 end
