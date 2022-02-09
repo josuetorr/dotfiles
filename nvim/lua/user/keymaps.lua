@@ -25,9 +25,9 @@ keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- navigate buffers (tabs)
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-keymap("n", "<Leader>d", ":Bdelete!<CR>", opts)
+keymap("n", "tk", ":bnext<CR>", opts)
+keymap("n", "tj", ":bprevious<CR>", opts)
+keymap("n", "td", ":Bdelete!<CR>", opts)
 
 -- file tree
 keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
