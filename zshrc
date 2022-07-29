@@ -129,6 +129,7 @@ alias ..="cd .."
 alias mv="mv -i"
 alias rm="rm -i"
 alias l="ls -lAh"
+alias love="/Applications/love.app/Contents/MacOS/love"
 # alias cd="cd && ls"
 #
 
