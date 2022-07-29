@@ -47,14 +47,16 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 
 	-- Colorschemes
+  use("rose-pine/neovim")
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
+  use("ishan9299/modus-theme-vim")
 	use("josuetorr/moonlight.nvim")
+	-- use("dracula/vim")
 	use("Mofiqul/dracula.nvim")
 	use("yonlu/omni.vim")
 	use("NTBBloodbath/doom-one.nvim")
 	use("folke/tokyonight.nvim")
 	use("shaunsingh/nord.nvim")
-	-- use 'arcticicestudio/nord-vim'
 	use("marko-cerovac/material.nvim")
 	use("rafamadriz/neon")
 

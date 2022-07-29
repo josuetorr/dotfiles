@@ -1,4 +1,4 @@
-local colo = "moonlight"
+local colo = "dracula"
 
 vim.g.nord_contrast = true
 vim.g.material_style = "deep ocean"
