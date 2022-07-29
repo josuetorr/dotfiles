@@ -60,7 +60,7 @@ end
 keymap("n", "<Leader>f", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>g", ":Telescope live_grep<CR>", opts)
 keymap("n", "<Leader>h", ":Telescope help_tags<CR>", opts)
-keymap("n", "<Leader>c", ":Telescope coloscheme<CR>", opts)
+keymap("n", "<Leader>c", ":Telescope colorscheme<CR>", opts)
 keymap("n", "gR", ":Telescope lsp_references theme=ivy<CR>", opts)
 keymap("n", "gd", ":Telescope lsp_definitions theme=ivy<CR>", opts)
 keymap("n", "gi", ":Telescope lsp_implementations theme=ivy<CR>", opts)
