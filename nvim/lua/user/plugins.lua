@@ -47,9 +47,9 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 
 	-- Colorschemes
-  use("rose-pine/neovim")
+	use("rose-pine/neovim")
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
-  use("ishan9299/modus-theme-vim")
+	use("ishan9299/modus-theme-vim")
 	use("josuetorr/moonlight.nvim")
 	--[[ use("dracula/vim") ]]
 	use("Mofiqul/dracula.nvim")
@@ -80,6 +80,7 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
+	use({ "mfussenegger/nvim-jdtls", ft = { "java" } })
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim")
@@ -125,6 +126,9 @@ return packer.startup(function(use)
 
 	-- better motion
 	use("easymotion/vim-easymotion")
+
+	-- transparent background
+	use("xiyaowong/nvim-transparent")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
