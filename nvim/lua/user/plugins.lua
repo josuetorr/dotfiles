@@ -53,12 +53,14 @@ return packer.startup(function(use)
 	use("josuetorr/moonlight.nvim")
 	--[[ use("dracula/vim") ]]
 	use("Mofiqul/dracula.nvim")
-	use("yonlu/omni.vim")
 	use("NTBBloodbath/doom-one.nvim")
-	use("folke/tokyonight.nvim")
 	use("shaunsingh/nord.nvim")
 	use("marko-cerovac/material.nvim")
 	use("rafamadriz/neon")
+	use("davidbachmann/vim-punk-colorscheme")
+	use("cocopon/iceberg.vim")
+	use("junegunn/seoul256.vim")
+  use("EdenEast/nightfox.nvim")
 
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
