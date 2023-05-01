@@ -32,7 +32,7 @@ keymap("n", "tl", ":blast<CR>", opts)
 keymap("n", "td", ":Bdelete!<CR>", opts)
 
 -- file tree
-keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<Leader>e", ":Telescope file_browser<Cr>", opts)
 keymap("n", "<Leader>r", ":NvimTreeRefresh<Cr>", opts)
 keymap("n", "<Leader>n", ":NvimTreeFindFile<Cr>", opts)
 
@@ -45,15 +45,15 @@ keymap("v", ">", ">gv", opts)
 
 -- move text up and down
 if vim.fn.has("Darwin") then
-	keymap("v", "∆", ":m .+1<CR>==", opts)
-	keymap("v", "˚", ":m .-2<CR>==", opts)
-	keymap("n", "∆", ":m .+1<CR>==", opts)
-	keymap("n", "˚", ":m .-2<CR>==", opts)
+  keymap("v", "∆", ":m .+1<CR>==", opts)
+  keymap("v", "˚", ":m .-2<CR>==", opts)
+  keymap("n", "∆", ":m .+1<CR>==", opts)
+  keymap("n", "˚", ":m .-2<CR>==", opts)
 else
-	keymap("v", "<A-j>", ":m .-2<CR>==", opts)
-	keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-	keymap("n", "<A-j>", ":m .-2<CR>==", opts)
-	keymap("n", "<A-k>", ":m .-2<CR>==", opts)
+  keymap("v", "<A-j>", ":m .-2<CR>==", opts)
+  keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+  keymap("n", "<A-j>", ":m .-2<CR>==", opts)
+  keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 end
 
 -- Telescope (some commands replace the ones found in lsp/handler)
@@ -78,14 +78,14 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- for developing plugins
 function save_and_exec()
-	if vim.bo.filetype == "vim" then
-		vim.cmd(":silent! write")
-		vim.cmd(":source %")
-	elseif vim.bo.filetype == "lua" then
-		vim.cmd(":silent! write")
-		vim.cmd(":lua require('plenary.reload').reload_module'Linerunner'")
-		vim.cmd(":luafile %")
-	end
+  if vim.bo.filetype == "vim" then
+    vim.cmd(":silent! write")
+    vim.cmd(":source %")
+  elseif vim.bo.filetype == "lua" then
+    vim.cmd(":silent! write")
+    vim.cmd(":lua require('plenary.reload').reload_module'Linerunner'")
+    vim.cmd(":luafile %")
+  end
 end
 
 keymap("n", "<Leader><Leader>x", ":lua save_and_exec()<CR>", opts)

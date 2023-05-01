@@ -55,12 +55,14 @@ return packer.startup(function(use)
   use("Mofiqul/dracula.nvim")
   use("yonlu/omni.vim")
   use("NTBBloodbath/doom-one.nvim")
-  use("folke/tokyonight.nvim")
   use("shaunsingh/nord.nvim")
   use("marko-cerovac/material.nvim")
   use("rafamadriz/neon")
   use({ "catppuccin/nvim", as = "catppuccin" })
   use("nyoom-engineering/oxocarbon.nvim")
+
+  -- bufferline (tabs)
+  use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
   -- colorizer
   use({
@@ -113,12 +115,12 @@ return packer.startup(function(use)
   -- Git
   use("lewis6991/gitsigns.nvim")
 
-  -- NvimTree
-  use("kyazdani42/nvim-web-devicons")
-  use("kyazdani42/nvim-tree.lua")
+  use({
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-web-devicons" },
+  })
 
   -- Buffers
-  use("akinsho/bufferline.nvim")
   use("moll/vim-bbye")
 
   -- lualine
@@ -135,6 +137,9 @@ return packer.startup(function(use)
 
   -- better motion
   use("easymotion/vim-easymotion")
+
+  -- transparent
+  use("xiyaowong/transparent.nvim")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
