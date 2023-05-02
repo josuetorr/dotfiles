@@ -89,9 +89,14 @@ return packer.startup(function(use)
   use("mattn/emmet-vim")
 
   -- LSP
-  use("neovim/nvim-lspconfig")          -- enable LSP
-  use("williamboman/nvim-lsp-installer") -- simple to use language server installer
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
+  use("mfussenegger/nvim-dap")
+  use({
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    run = ":MasonUpdate", -- :MasonUpdate updates registry contents
+  })
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
@@ -117,7 +122,7 @@ return packer.startup(function(use)
 
   use({
     "nvim-telescope/telescope-file-browser.nvim",
-    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-web-devicons" },
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-web-devicons" }
   })
 
   -- Buffers

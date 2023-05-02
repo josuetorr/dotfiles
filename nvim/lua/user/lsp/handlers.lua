@@ -1,6 +1,14 @@
+local status_ok, lspconfig = pcall(require,'lspconfig')
+
+if not status_ok then
+  print("lspconfig not installed")
+  return;
+end
+
+local mason
+
 local M = {}
 
--- TODO: backfill this to template
 M.setup = function()
 	local signs = {
 		{ name = "DiagnosticSignError", text = "" },
@@ -42,6 +50,7 @@ M.setup = function()
 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
 		border = "rounded",
 	})
+
 end
 
 local function lsp_highlight_document(client)

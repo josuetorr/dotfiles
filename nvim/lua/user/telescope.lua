@@ -8,6 +8,8 @@ telescope.load_extension("file_browser")
 
 local actions = require("telescope.actions")
 
+local explorer_actions = require("telescope").extensions.file_browser.actions
+
 telescope.setup({
   defaults = {
     prompt_prefix = " ",
@@ -100,7 +102,9 @@ telescope.setup({
       hijack_netrw = true,
       mapping = {
         ["i"] = {},
-        ["n"] = {},
+        ["n"] = {
+          ["<C-a>"] = explorer_actions.create,
+        },
       },
     },
     -- Your extension configuration goes here:

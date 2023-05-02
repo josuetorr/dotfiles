@@ -129,8 +129,7 @@ alias mv="mv -i"
 alias rm="rm -i"
 alias l="ls -lAh"
 alias love="/Applications/love.app/Contents/MacOS/love"
-# alias cd="cd && ls"
-#
+alias gotoEden="cd ~/Projects/www/eden"
 
 # Spaceship theme settings
 # SPACESHIP_CHAR_SYMBOL=" :: "
