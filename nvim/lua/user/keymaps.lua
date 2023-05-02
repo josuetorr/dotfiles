@@ -65,7 +65,8 @@ keymap("n", "<Leader>C", ":Telescope git_commits<CR>", opts)
 keymap("n", "gR", ":Telescope lsp_references theme=ivy<CR>", opts)
 keymap("n", "gd", ":Telescope lsp_definitions theme=ivy<CR>", opts)
 keymap("n", "gi", ":Telescope lsp_implementations theme=ivy<CR>", opts)
-keymap("n", "gx", ":Telescope lsp_code_actions theme=cursor<CR>", opts)
+keymap("n", "gf", ":Telescope current_buffer_fuzzy_find theme=cursor<CR>", opts)
+
 
 -- formatting
 keymap("n", "<Space>p", ":Format<cr>", opts)
