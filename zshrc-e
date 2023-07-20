@@ -178,8 +178,3 @@ precmd_functions+=(_fix_cursor)
 # }
 
 alias luamake=/Users/brain/.dotfiles/lua-language-server/3rd/luamake/luamake
-
-[ -f "/Users/brain/.ghcup/env" ] && source "/Users/brain/.ghcup/env" # ghcup-env
-
-# opam configuration
-[[ ! -r /Users/brain/.opam/opam-init/init.zsh ]] || source /Users/brain/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
