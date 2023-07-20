@@ -72,5 +72,9 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- mainly used for formatting
   use("jose-elias-alvarez/null-ls.nvim")
+
+  -- better motion
+  use("easymotion/vim-easymotion")
 end)
