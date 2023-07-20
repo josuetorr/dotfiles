@@ -23,10 +23,10 @@ lsp.setup_nvim_cmp({
 })
 
 lsp.set_sign_icons({
-    error = "🚨",
-    warn = "⚠️",
-    hint = "💡",
-    info = "ℹ",
+  error = "🚨",
+  warn = "⚠️",
+  hint = "💡",
+  info = "ℹ",
 })
 
 lsp.on_attach(function(_, bufnr)
@@ -41,6 +41,8 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set("n", "gk", function() vim.diagnostic.goto_prev() end, opts)
   vim.keymap.set("n", "gj", function() vim.diagnostic.goto_next() end, opts)
   vim.keymap.set("n", "gh", function() vim.lsp.buf.signature_help() end, opts)
+
+  vim.keymap.set("n", "<leader>p", function() vim.lsp.buf.format({ async = false, timeout_ms = 10000 }) end, opts)
 end)
 
 
