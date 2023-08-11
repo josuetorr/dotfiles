@@ -7,7 +7,6 @@ vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 
 -- copying to clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
