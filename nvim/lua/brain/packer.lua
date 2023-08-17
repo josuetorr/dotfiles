@@ -86,8 +86,11 @@ return require("packer").startup(function(use)
 	-- emmet everywhere
 	use("mattn/emmet-vim")
 
+	-- status line
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
+
+	use("RRethy/vim-illuminate")
 end)
