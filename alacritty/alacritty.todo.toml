@@ -1,0 +1,10 @@
+[env]
+TERM = "alacritty"
+
+[window]
+opacity = 0.5
+
+[font]
+family = "JetBrainsMonoNerd"
+style = "Regular"
+size = 10

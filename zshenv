@@ -7,8 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=/opt/homebrew/bin:$PATH
 
 # Path to jdk
-JAVA_HOME=$(/usr/libexec/java_home)
-export PATH=$PATH:$JAVA_HOME
+# JAVA_HOME=$(/usr/libexec/java_home)
+# export PATH=$PATH:$JAVA_HOME
 # path+=(/usr/lib/jvm/java-11-openjdk-amd64)
 
 # Path to SNAP
@@ -70,5 +70,5 @@ export PATH
 if [ -f '/Users/josue/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/josue/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/josue/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/josue/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-. "$HOME/.cargo/env"
+# if [ -f '/Users/josue/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/josue/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+# . "$HOME/.cargo/env"
