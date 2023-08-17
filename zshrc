@@ -129,7 +129,8 @@ alias mv="mv -i"
 alias rm="rm -i"
 alias love="/Applications/love.app/Contents/MacOS/love"
 alias pn="pnpm"
-alias l="exa -l --header --icons"
+alias l="exa -l --header --icons --git"
+alias ls="exa"
 
 # Spaceship theme settings
 # SPACESHIP_CHAR_SYMBOL=" :: "
