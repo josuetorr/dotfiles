@@ -127,9 +127,9 @@ alias nvpt="nvim --cmd 'set rtp+=.'"
 alias ..="cd .."
 alias mv="mv -i"
 alias rm="rm -i"
-alias l="ls -lAh"
 alias love="/Applications/love.app/Contents/MacOS/love"
 alias pn="pnpm"
+alias l="exa -l --header --icons"
 
 # Spaceship theme settings
 # SPACESHIP_CHAR_SYMBOL=" :: "
