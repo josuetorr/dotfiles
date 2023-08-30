@@ -2,7 +2,8 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="spaceship"
+# ZSH_THEME="spaceship"
+eval "$(starship init zsh)"
 
 # figlet -f bubble "LIVE HERE AND NOW" | lolcat
 livehereandnow | lolcat
@@ -131,6 +132,7 @@ alias love="/Applications/love.app/Contents/MacOS/love"
 alias pn="pnpm"
 alias l="exa -la --header --icons --git"
 alias ls="exa"
+alias luamake=/Users/brain/.dotfiles/lua-language-server/3rd/luamake/luamake
 
 # Spaceship theme settings
 # SPACESHIP_CHAR_SYMBOL=" :: "
@@ -178,7 +180,6 @@ precmd_functions+=(_fix_cursor)
 #     echo -ne '\e[5 q'
 # }
 
-alias luamake=/Users/brain/.dotfiles/lua-language-server/3rd/luamake/luamake
 
 [ -f "/Users/brain/.ghcup/env" ] && source "/Users/brain/.ghcup/env" # ghcup-env
 

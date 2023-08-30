@@ -42,6 +42,7 @@ alt+ctrl-l: yabai -m window --warp east
 # start/stop yabai
 alt+ctrl-q: yabai --stop-service
 alt+ctrl-s: yabai --start-service
+alt+ctrl-r: yabai --restart-service
 
 # move window to different display
 alt+cmd-j: yabai -m window --display west

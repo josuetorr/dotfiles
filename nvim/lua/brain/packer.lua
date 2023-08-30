@@ -22,7 +22,7 @@ return require("packer").startup(function(use)
 
 	-- colorschemes
 	use({ "rose-pine/neovim", as = "rose-pine" })
-
+  use { "catppuccin/nvim", as = "catppuccin" }
 	-- TreeSitter
 	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
 	use("nvim-treesitter/playground")
