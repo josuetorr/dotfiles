@@ -185,3 +185,7 @@ precmd_functions+=(_fix_cursor)
 
 # opam configuration
 [[ ! -r /Users/brain/.opam/opam-init/init.zsh ]] || source /Users/brain/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
