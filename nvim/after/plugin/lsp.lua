@@ -29,7 +29,7 @@ lsp.set_sign_icons({
   info = "ℹ",
 })
 
-lsp.on_attach(function(_, bufnr)
+lsp.on_attach(function(client, bufnr)
   local opts = { buffer = bufnr, remap = false }
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
@@ -42,7 +42,8 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set("n", "gj", function() vim.diagnostic.goto_next() end, opts)
   vim.keymap.set("n", "gh", function() vim.lsp.buf.signature_help() end, opts)
 
-  vim.keymap.set("n", "<leader>p", function() vim.lsp.buf.format({ async = false, timeout_ms = 10000 }) end, opts)
+  -- vim.keymap.set("n", "<leader>p", function() vim.lsp.buf.format({ async = false, filter = function(client) return client.name ~= "tsserver" end }) end, opts)
+  vim.keymap.set("n", "<leader>p", function() require("conform").format({ async = false, bufnr = bufrn }) end, opts)
 end)
 
 
