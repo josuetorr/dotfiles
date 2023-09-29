@@ -22,7 +22,7 @@ return require("packer").startup(function(use)
 
 	-- colorschemes
 	use({ "rose-pine/neovim", as = "rose-pine" })
-  use { "catppuccin/nvim", as = "catppuccin" }
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	-- TreeSitter
 	use({ "nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" } })
 	use("nvim-treesitter/playground")
@@ -74,9 +74,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- mainly used for formatting
-	use("jose-elias-alvarez/null-ls.nvim")
-
 	-- better motion
 	use("easymotion/vim-easymotion")
 
@@ -92,5 +89,17 @@ return require("packer").startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
 
+	-- highlighting word on cursor
 	use("RRethy/vim-illuminate")
+
+	-- lsp ui info
+	use({
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		config = function()
+			require("fidget").setup({
+				-- options
+			})
+		end,
+	})
 end)
