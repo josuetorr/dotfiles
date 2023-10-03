@@ -6,6 +6,8 @@ lsp.ensure_installed({
 	"tsserver",
 	"eslint",
 	"rust_analyzer",
+	"lua_ls",
+	"csharp_ls",
 })
 
 lsp.nvim_workspace()
@@ -60,10 +62,17 @@ lsp.on_attach(function(_, bufnr)
 		vim.lsp.buf.signature_help()
 	end, opts)
 
-	-- vim.keymap.set("n", "<leader>p", function() vim.lsp.buf.format({ async = false, filter = function(client) return client.name ~= "tsserver" end }) end, opts)
 	vim.keymap.set("n", "<leader>p", function()
-		require("conform").format({ async = false, bufnr = bufnr })
+		vim.lsp.buf.format({
+			async = false,
+			filter = function(client)
+				return client.name ~= "tsserver"
+			end,
+		})
 	end, opts)
+	-- vim.keymap.set("n", "<leader>p", function()
+	-- 	require("conform").format({ async = false, bufnr = bufnr })
+	-- end, opts)
 end)
 
 lsp.setup()

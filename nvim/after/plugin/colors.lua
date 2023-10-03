@@ -1,4 +1,4 @@
-function colorMe(color)
+local colorMe = function(color)
   color = color or "rose-pine"
   vim.cmd.colorscheme(color)
 
