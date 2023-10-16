@@ -60,8 +60,9 @@ export MYVIMRC_PARENT=$DOTFILES/nvim/
 # opting out of telemetry for dotnet
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
 export DOTNET_HTTPREPL_TELEMETRY_OPTOUT=true
+
 # dotnet tools path
-export PATH=$PATH:/Users/brain/.dotnet/tools
+export PATH=$PATH:/$HOME/.dotnet/tools
 
 typeset -U path
 export PATH

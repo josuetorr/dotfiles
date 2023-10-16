@@ -64,15 +64,14 @@ lsp.on_attach(function(_, bufnr)
 
 	vim.keymap.set("n", "<leader>p", function()
 		vim.lsp.buf.format({
+			bufnr = bufnr,
 			async = false,
 			filter = function(client)
 				return client.name ~= "tsserver"
 			end,
 		})
+		-- require("conform").format({ async = false, bufnr = bufnr })
 	end, opts)
-	-- vim.keymap.set("n", "<leader>p", function()
-	-- 	require("conform").format({ async = false, bufnr = bufnr })
-	-- end, opts)
 end)
 
 lsp.setup()
