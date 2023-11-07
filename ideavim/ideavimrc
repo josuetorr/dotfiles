@@ -38,4 +38,4 @@ map <S-Space> <Action>(GotoNextError)
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
-map jk <Esc>
+imap jk <Esc>
