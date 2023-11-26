@@ -17,7 +17,7 @@ let g:argtextobj_pairs="[:],(:),<:>"
 set showmode
 set so=5
 set incsearch
-set nu
+set relativenumber
 
 """ Idea specific settings ------------------
 set ideajoin
@@ -26,7 +26,8 @@ set idearefactormode=keep
 
 """ Mappings --------------------------------
 map <leader>d <Action>(Debug)
-map <leader>gr <Action>(RenameElement)
+map <leader>r <Action>(Run)
+map <leader>k <Action>(RunToolbarMainMultipleStopAction)
 map <leader>c <Action>(Stop)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
@@ -38,4 +39,13 @@ map <S-Space> <Action>(GotoNextError)
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
+map <leader>p <Action>(ReformatCode)
+
+map gr <Action>(RenameElement)
+map gR <Action>(FindUsages)
+
 imap jk <Esc>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l

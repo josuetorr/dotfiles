@@ -8,6 +8,5 @@ require("conform").setup({
 		typescript = { { "prettierd", "prettier" } },
 		typescriptreact = { { "prettierd", "prettier" } },
 		json = { { "prettierd", "prettier" } },
-		cs = { "omnisharp" },
-	},
+	}
 })

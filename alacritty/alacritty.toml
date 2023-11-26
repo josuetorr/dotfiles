@@ -5,6 +5,6 @@ TERM = "alacritty"
 opacity = 0.5
 
 [font]
-family = "JetBrainsMonoNerd"
+family = "SourcePro"
 style = "Regular"
 size = 10
