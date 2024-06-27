@@ -1,0 +1,13 @@
+set internet connect: wpa_supplicant & dhclient
+intall Xorg & configure xinitrc
+install a terminal
+install fonts
+download WM
+fix trackpad & keyboard light
+fix sound
+setup zsh & vim
+install compositor
+set backlight
+setup sxhkd
+setup a lockscreen (slock)
+setup bluetooth

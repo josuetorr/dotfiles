@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for install_script in install_[!all]*; do
+	chmod +x $install_script
+	yes | . "./${install_script}"
+done

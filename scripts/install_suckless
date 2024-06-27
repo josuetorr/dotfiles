@@ -1,0 +1,40 @@
+#!/bin/zsh
+
+src_dir="${HOME}/.local/src"
+
+if [[ ! -d "$src_dir" ]]; then
+ mkdir -p "$src_dir" 
+fi
+
+dwm_dir="${src_dir}/dwm"
+dmenu_dir="${src_dir}/dmenu"
+st_dir="${src_dir}/st"
+slock_dir="${src_dir}/slock"
+
+if [[ ! -d $dwm_dir ]]; then
+  sudo apt-get install libx11-dev libxinerama-dev
+  mkdir $dwm_dir
+  git clone git@github.com:josuetorr/dwm.git $dwm_dir
+fi
+
+if [[ ! -d $dmenu_dir ]]; then
+  sudo apt install libxft-dev
+  mkdir $dmenu_dir
+  git clone git@github.com:josuetorr/dmenu.git $dmenu_dir
+fi
+
+if [[ ! -d $st_dir ]]; then
+  mkdir $st_dir
+  git clone git@github.com:josuetorr/st.git $st_dir
+fi
+
+if [[ ! -d $slock_dir ]]; then
+  sudo apt install libxrandr-dev 
+  mkdir $slock_dir
+  git clone https://git.suckless.org/slock $slock_dir
+fi
+
+cd $dwm_dir; sudo make install clean
+cd $dmenu_dir; sudo make install clean
+cd $st_dir; sudo make install clean
+cd $slock_dir; sudo make install clean

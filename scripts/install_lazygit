@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+dir="${HOME}/.local/src/lazygit"
+if [[ ! -d $dir ]]; then
+  git clone https://github.com/jesseduffield/lazygit.git $dir
+fi
+
+cd $dir
+go install

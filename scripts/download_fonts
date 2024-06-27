@@ -1,0 +1,23 @@
+#!/bin/bash
+
+fonts=(FiraCode JetBrainsMono ZedMono)
+
+version='3.2.1'
+fonts_dir="${HOME}/.fonts"
+
+if [[ ! -d "$fonts_dir" ]]; then
+	mkdir -p "$fonts_dir"
+else
+  echo "wtf"
+fi
+
+for font in "${fonts[@]}"; do
+	zip_file="${font}.zip"
+	download_url="https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/${zip_file}"
+	echo "Downloading $font from $download_url"
+	wget -P "$fonts_dir" "$download_url"
+	unzip "${fonts_dir}/$zip_file" -d "$fonts_dir"
+	rm "$zip_file"
+done
+
+fc-cache -fv

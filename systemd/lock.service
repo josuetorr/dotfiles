@@ -1,0 +1,12 @@
+[Unit]
+Description=Lock the screen
++Before=sleep.target
+
+[Service]
+User=brain
+Environment=DISPLAY=:0
+ExecStart=/usr/local/bin/slock
+
+[Install]
+-WantedBy=suspend.target
++WantedBy=sleep.target

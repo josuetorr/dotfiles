@@ -1,0 +1,39 @@
+
+# Volume bindings
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+    amixer sset Master 5%{+,-}; statusdwm.sh
+
+XF86AudioMute
+    amixer sset Master toggle; statusdwm.sh
+
+# Brightness control
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+    xbacklight -{inc,dec} 10
+
+# Spawn terminal
+super + Return
+    $TERMINAL
+
+# Launch dmenu
+alt + space
+    dmenu_run 
+
+# Screenshots
+Print
+    scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshots/'; notify-send "Screenshot done!"
+
+# vifm
+super + shift + v
+    $TERMINAL -e vifm
+
+# Shutdown, reboot, suspend prompt
+super + shift + Return
+    exitprompt
+
+# Set keyboard layout
+super + shift + space
+    kblayouts.sh
+
+# Monitor layouts
+super + shift + m
+    monselect.sh
