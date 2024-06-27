@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd ..
+for z_file in [z]*; do
+  ln -s "${HOME}/.dotfiles/${z_file}" "${HOME}/.${z_file}"
+done
