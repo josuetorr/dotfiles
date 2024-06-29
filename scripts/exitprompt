@@ -3,7 +3,7 @@
 x=$(echo "poweroff\nreboot\nsleep" | dmenu -p "Exiting...")
 
 case $x in
-    poweroff) systemctl poweroff;;
-    reboot) systemctl reboot;;
-    sleep) systemctl suspend;;
+    poweroff) sudo systemctl poweroff;;
+    reboot) sudo systemctl reboot;;
+    sleep) sudo systemctl suspend;;
 esac
