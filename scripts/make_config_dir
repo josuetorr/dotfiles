@@ -1,0 +1,6 @@
+#!/bin/sh
+
+config_dir="${HOME}/.config"
+if [ ! -d $config_dir ]; then
+	mkdir $config_dir 2> /dev/null
+fi

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+x_files="xinitrc xsession"
+
+for x_file in $x_files; do
+  echo "linking ${x_file}"
+  ln -s "${HOME}/.dotfiles/${x_file}" "${HOME}/.${x_file}"
+done

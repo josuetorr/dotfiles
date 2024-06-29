@@ -1,8 +1,4 @@
 #!/bin/sh
 
-config_dir="${HOME}/.config"
-if [ ! -d $config_dir ]; then
-	mkdir $config_dir 2> /dev/null
-fi
-
+./make_config_dir
 ln -s "${HOME}/.dotfiles/nvim" "${config_dir}/nvim"
