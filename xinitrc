@@ -10,8 +10,8 @@ dunst &
 # nm-applet &
 
 # set status bar
-# while true ; do
-#     statusdwm.sh
-#     sleep 500ms
-# done
+while true ; do
+    statusdwm.sh
+    sleep 500ms
+done
 exec dwm

@@ -15,7 +15,8 @@ getdate()
 
 getvolume()
 {
-    [ -z "$(amixer get Master | grep -o "\[off\]")" ] && echo -n "VOL $(amixer get Master | grep "Front Left" | grep -o "[0-9]*%")" || echo -n "MUTE"
+    # [ -z "$(amixer get Master | grep -o "\[off\]")" ] && echo -n "VOL $(amixer get Master | grep "Front Left" | grep -o "[0-9]*%")" || echo -n "MUTE"
+    echo "todo vol"
 }
 
 getbattery()
