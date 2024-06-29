@@ -20,7 +20,7 @@ alt + space
 
 # Screenshots
 Print
-    scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/screenshots/'; notify-send "Screenshot done!"
+    scrot '%Y-%m-%d_%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots/'; notify-send "Screenshot done!"
 
 # vifm
 super + shift + v

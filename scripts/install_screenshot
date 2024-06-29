@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sh_dir="${HOME}/Pictures/Screenshots" 
+if [ ! -d $sh_dir ]; then
+  mkdir -p $sh_dir
+fi
+
+sudo apt install -y scrot

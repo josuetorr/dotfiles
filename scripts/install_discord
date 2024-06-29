@@ -1,0 +1,7 @@
+#!/bin/sh
+
+filename=discord.deb
+wget "https://discord.com/api/download?platform=linux&format=deb" -O $filename
+sudo apt install -y libnspr4 libnss3
+sudo dpkg -i "./${filename}"
+rm $filename
