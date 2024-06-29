@@ -6,5 +6,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # qtile &
 picom &
 sxhkd &
+dunst &
 # nm-applet &
 exec dwm

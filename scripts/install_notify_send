@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sudo apt install -y libnotify-bin
+sudo apt install -y notification-daemon
+sudo apt install -y dunst
