@@ -13,6 +13,7 @@ export EDITOR="nvim"
 export XDG_CONFIG_HOME=$HOME/.config
 
 export DOTFILES=$HOME/.dotfiles
+export LOCAL_SRC=$HOME/.local/src
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
 export DOTNET_HTTPREPL_TELEMETRY_OPTOUT=true
 
