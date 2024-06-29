@@ -7,11 +7,14 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 picom &
 sxhkd &
 dunst &
+dwm &
 # nm-applet &
+
+# set wallpaper
+nitrogen --restore &
 
 # set status bar
 while true ; do
     statusdwm.sh
     sleep 500ms
 done
-exec dwm
