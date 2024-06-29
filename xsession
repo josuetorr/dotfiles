@@ -4,7 +4,6 @@
 
 # set wallpaper
 nitrogen --restore &
-sxhkd &
 
 # set status bar
 while true ; do
