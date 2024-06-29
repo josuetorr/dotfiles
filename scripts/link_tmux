@@ -1,4 +1,4 @@
 #!/bin/sh
 
-./make_config_dir
+make_config_dir
 ln -s "${HOME}/.dotfiles/tmux" "${HOME}/.config/tmux"
