@@ -135,6 +135,7 @@ alias pn="pnpm"
 alias l="exa -la --header --icons --git"
 alias ls="exa"
 alias luamake=/Users/brain/.dotfiles/lua-language-server/3rd/luamake/luamake
+alias suckless="cd ${HOME}/.local/src/suckless"
 
 # Spaceship theme settings
 # SPACESHIP_CHAR_SYMBOL=" :: "
@@ -223,5 +224,3 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/brain/Library/Application Support/Herd/c
 
 # Herd injected PHP binary.
 export PATH="/Users/brain/Library/Application Support/Herd/bin/":$PATH
-
-eval "$(starship init zsh)"
