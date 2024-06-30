@@ -103,6 +103,7 @@ fi
 alias vim='nvim'
 alias dl="cd ~/Downloads"
 alias dfs="cd ~/.dotfiles"
+alias proj="cd ~/Projects"
 alias g="git"
 alias ga="git add"
 alias gc="git commit"
