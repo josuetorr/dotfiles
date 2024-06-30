@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo apt install lolcat
+sudo dnf install lolcat -y

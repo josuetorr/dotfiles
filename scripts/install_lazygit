@@ -1,9 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
-dir="${HOME}/.local/src/lazygit"
-if [[ ! -d $dir ]]; then
-  git clone https://github.com/jesseduffield/lazygit.git $dir
-fi
-
-cd $dir
-go install
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit -y
