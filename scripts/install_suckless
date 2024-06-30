@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-src_dir="${HOME}/.local/src"
+src_dir="${HOME}/.local/src/suckless"
 
 if [[ ! -d "$src_dir" ]]; then
  mkdir -p "$src_dir" 
@@ -12,13 +12,13 @@ st_dir="${src_dir}/st"
 slock_dir="${src_dir}/slock"
 
 if [[ ! -d $dwm_dir ]]; then
-  sudo apt-get install libx11-dev libxinerama-dev
+  sudo dnf install libx11-dev libxinerama-dev -y
   mkdir $dwm_dir
   git clone git@github.com:josuetorr/dwm.git $dwm_dir
 fi
 
 if [[ ! -d $dmenu_dir ]]; then
-  sudo apt install libxft-dev
+  sudo dnf install libxft-dev -y
   mkdir $dmenu_dir
   git clone git@github.com:josuetorr/dmenu.git $dmenu_dir
 fi
@@ -29,7 +29,7 @@ if [[ ! -d $st_dir ]]; then
 fi
 
 if [[ ! -d $slock_dir ]]; then
-  sudo apt install libxrandr-dev 
+  sudo dnf install libxrandr-dev -y
   mkdir $slock_dir
   git clone https://git.suckless.org/slock $slock_dir
 fi
