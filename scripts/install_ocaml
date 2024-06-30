@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sudo dnf install ocaml -y
+sudo dnf install opam -y
+opam init
+eval $(opam env --switch=default)
