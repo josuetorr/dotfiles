@@ -213,3 +213,5 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/brain/Library/Application Support/Herd/c
 
 # Herd injected PHP binary.
 export PATH="/Users/brain/Library/Application Support/Herd/bin/":$PATH
+
+export N_PREFIX="$HOME/.local/share/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
