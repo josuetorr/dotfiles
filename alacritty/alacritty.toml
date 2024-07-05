@@ -19,10 +19,10 @@ size = 11
 [font.normal]
 # family = "GohuFont 14 Nerd Font"
 # family = "M+CodeLat60 Nerd Font"
-# family = "FiraCode Nerd Font"
+family = "FiraCode Nerd Font"
 # family = "Mononoki Nerd Font"
 # family = "Hack Nerd Font"
 # family = "JetBrainsMono NF"
 # family = "Agave Nerd Font Mono"
-family = "ZedMono Nerd Font Mono"
+# family = "ZedMono Nerd Font Mono"
 style = "Regular"
