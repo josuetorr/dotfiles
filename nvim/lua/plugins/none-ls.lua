@@ -9,7 +9,7 @@ return {
         null_ls.builtins.formatting.ocamlformat,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.pint,
-        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.prettierd,
         null_ls.builtins.formatting.csharpier,
         null_ls.builtins.formatting.shfmt,
         null_ls.builtins.diagnostics.editorconfig_checker,
