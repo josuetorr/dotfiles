@@ -1,3 +1,4 @@
 #!/bin/sh
 
-sudo dnf install alacritty -y
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3 -y
+sudo apt install alacritty -y

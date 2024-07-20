@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo dnf install fzf -y
+sudo apt install fzf -y

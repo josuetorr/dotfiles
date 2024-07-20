@@ -6,7 +6,7 @@
 eval "$(starship init zsh)"
 
 # figlet -f bubble "LIVE HERE AND NOW" | lolcat
-livehereandnow | lolcat
+# livehereandnow | lolcat
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -176,8 +176,8 @@ precmd_functions+=(_fix_cursor)
 [ -f "/Users/brain/.ghcup/env" ] && source "/Users/brain/.ghcup/env" # ghcup-env
 
 # opam configuration
-[[ ! -r /Users/brain/.opam/opam-init/init.zsh ]] || source /Users/brain/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-eval $(opam env)
+# [[ ! -r /Users/brain/.opam/opam-init/init.zsh ]] || source /Users/brain/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+# eval $(opam env)
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

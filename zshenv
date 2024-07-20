@@ -30,6 +30,7 @@ export PATH=$PATH:~/.dotfiles/scripts
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:~/.local/usr/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 
@@ -38,3 +39,4 @@ export PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/josue/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/josue/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+. "$HOME/.cargo/env"

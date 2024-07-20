@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+usr_bin_dir="${HOME}/.local/usr/bin"
+if [[ ! -d "${usr_bin_dir}" ]]; then
+  mkdir -p "${usr_bin_dir}"
+fi
+
+cd ${usr_bin_dir}
+wget https://github.com/gleam-lang/gleam/releases/download/v1.3.2/gleam-v1.3.2-aarch64-unknown-linux-musl.tar.gz
+wget https://github.com/gleam-lang/gleam/releases/download/v1.3.2/gleam-v1.3.2-aarch64-unknown-linux-musl.tar.gz.sha256
+sha256sum -c gleam-v1.3.2-aarch64-unknown-linux-musl.tar.gz.sha256
+tar xf gleam-v1.3.2-aarch64-unknown-linux-musl.tar.gz
+rm *.tar*

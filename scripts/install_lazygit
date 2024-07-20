@@ -1,4 +1,10 @@
 #!/bin/sh
 
-sudo dnf copr enable atim/lazygit -y
-sudo dnf install lazygit -y
+
+if  ! command -v go > /dev/null 2>&1; then
+  install_go
+fi
+cd "${HOME}"/.local/usr/src
+git clone https://github.com/jesseduffield/lazygit.git
+cd lazygit
+go install
