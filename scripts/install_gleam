@@ -7,8 +7,14 @@ if [[ ! -d "${usr_bin_dir}" ]]; then
 fi
 
 cd ${usr_bin_dir}
-wget https://github.com/gleam-lang/gleam/releases/download/v1.3.2/gleam-v1.3.2-aarch64-unknown-linux-musl.tar.gz
-wget https://github.com/gleam-lang/gleam/releases/download/v1.3.2/gleam-v1.3.2-aarch64-unknown-linux-musl.tar.gz.sha256
-sha256sum -c gleam-v1.3.2-aarch64-unknown-linux-musl.tar.gz.sha256
-tar xf gleam-v1.3.2-aarch64-unknown-linux-musl.tar.gz
+wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
+sudo dpkg -i erlang-solutions_2.0_all.deb
+sudo apt-get update
+sudo apt-get install esl-erlang
+
+gleam_file=gleam-v1.3.2-x86_64-unknown-linux-musl.tar.gz
+wget https://github.com/gleam-lang/gleam/releases/download/v1.3.2/${gleam_file}
+wget https://github.com/gleam-lang/gleam/releases/download/v1.3.2/${gleam_file}
+sha256sum -c "${gleam_file}.sha256"
+tar xf ${gleam_file}
 rm *.tar*
