@@ -121,8 +121,8 @@ alias rm="rm -i"
 alias rmrf="rm -rfi"
 alias love="/Applications/love.app/Contents/MacOS/love"
 alias pn="pnpm"
-alias l="exa -la --header --icons --git"
-alias ls="exa"
+alias l="eza -la --header --icons --git"
+alias ls="eza"
 alias luamake=/Users/brain/.dotfiles/lua-language-server/3rd/luamake/luamake
 alias suckless="cd ${HOME}/.local/src/suckless"
 
