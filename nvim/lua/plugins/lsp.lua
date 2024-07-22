@@ -107,6 +107,7 @@ return {
         })
       end)
 
+      require('lspconfig').gleam.setup{}
       require("mason-lspconfig").setup({
         ensure_installed = {},
         handlers = {
