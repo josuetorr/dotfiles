@@ -108,27 +108,9 @@ return {
       end)
 
       require("mason-lspconfig").setup({
-        ensure_installed = {
-        },
+        ensure_installed = {},
         handlers = {
           lsp_zero.default_setup,
-          intelephense = {
-            -- @type lspconfig.options
-            servers = {
-              intelephense = {
-                filetypes = { "php", "blade" },
-                settings = {
-                  intelephense = {
-                    filetypes = { "php", "blade" },
-                    files = {
-                      associations = { "*.php", "*.blade.php" }, -- Associating .blade.php files as well
-                      maxSize = 5000000,
-                    },
-                  },
-                },
-              },
-            },
-          },
           emmet_language_server = function()
             lsp_zero.configure("emmet_language_server", {
               filetypes = {

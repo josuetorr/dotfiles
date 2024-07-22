@@ -1,20 +1,15 @@
 #!/bin/bash
 
+./install_rust
 
-usr_bin_dir="${HOME}/.local/usr/bin"
-if [[ ! -d "${usr_bin_dir}" ]]; then
-  mkdir -p "${usr_bin_dir}"
+usr_src_dir="${HOME}/.local/usr/src"
+if [[ ! -d "${usr_src_dir}" ]]; then
+	mkdir -p "${usr_src_dir}"
 fi
 
-cd ${usr_bin_dir}
-wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
-sudo dpkg -i erlang-solutions_2.0_all.deb
-sudo apt-get update
-sudo apt-get install esl-erlang
+cd ${usr_src_dir}
+git clone https://github.com/gleam-lang/gleam.git --branch v1.3.2
+cd gleam
 
-gleam_file=gleam-v1.3.2-x86_64-unknown-linux-musl.tar.gz
-wget https://github.com/gleam-lang/gleam/releases/download/v1.3.2/${gleam_file}
-wget https://github.com/gleam-lang/gleam/releases/download/v1.3.2/${gleam_file}
-sha256sum -c "${gleam_file}.sha256"
-tar xf ${gleam_file}
-rm *.tar*
+make install
+sudo dnf install elixir erlang
