@@ -121,8 +121,8 @@ alias rm="rm -i"
 alias rmrf="rm -rfi"
 alias love="/Applications/love.app/Contents/MacOS/love"
 alias pn="pnpm"
-alias l="exa -la --header --icons --git"
-alias ls="exa"
+alias l="eza -la --header --icons --git"
+alias ls="eza"
 alias luamake=/Users/brain/.dotfiles/lua-language-server/3rd/luamake/luamake
 alias suckless="cd ${HOME}/.local/src/suckless"
 
@@ -176,8 +176,8 @@ precmd_functions+=(_fix_cursor)
 [ -f "/Users/brain/.ghcup/env" ] && source "/Users/brain/.ghcup/env" # ghcup-env
 
 # opam configuration
-# [[ ! -r /Users/brain/.opam/opam-init/init.zsh ]] || source /Users/brain/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-# eval $(opam env)
+[[ ! -r /Users/brain/.opam/opam-init/init.zsh ]] || source /Users/brain/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+eval $(opam env)
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -219,3 +219,11 @@ export N_PREFIX="$HOME/.local/share/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || 
 export DENO_INSTALL="/home/brain/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+
+# pnpm
+export PNPM_HOME="/home/brain/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
