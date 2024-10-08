@@ -12,12 +12,13 @@ else
 fi
 
 for font in "${fonts[@]}"; do
-	zip_file="${font}.zip"
-	download_url="https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/${zip_file}"
+	zip_filename="${font}.zip"
+  zip_filepath="${fonts_dir}/${zip_filename}"
+	download_url="https://github.com/ryanoasis/nerd-fonts/releases/download/v${version}/${zip_filename}"
 	echo "Downloading $font from $download_url"
 	wget -P "$fonts_dir" "$download_url"
-	unzip "${fonts_dir}/$zip_file" -d "$fonts_dir"
-	rm "$zip_file"
+	unzip "${zip_filepath}" -d "$fonts_dir"
+	rm "${zip_filepath}"
 done
 
 fc-cache -fv
