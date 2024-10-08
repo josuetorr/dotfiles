@@ -8,29 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fcc3a0eadee08f10",
+            "id": "f921ed76d9715e08",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
+                "file": "ideas.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "b0d7210278efeac5",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "591957855ee87041",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ]
@@ -99,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
+                "file": "ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "ideas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md"
+                "file": "ideas.md"
               }
             }
           }
@@ -160,8 +146,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fcc3a0eadee08f10",
+  "active": "f921ed76d9715e08",
   "lastOpenFiles": [
+    "2024-08-14.md",
+    "create a link.md",
+    "Untitled.canvas",
+    "ideas.md",
     "Welcome.md"
   ]
 }

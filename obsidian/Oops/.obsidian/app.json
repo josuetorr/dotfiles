@@ -1,1 +1,6 @@
-{}
+{
+  "livePreview": true,
+  "vimMode": true,
+  "showLineNumber": true,
+  "defaultViewMode": "source"
+}
