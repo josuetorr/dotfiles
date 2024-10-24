@@ -68,21 +68,6 @@ return {
 
       --- if you want to know more about lsp-zero and mason.nvim
       --- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
-      -- {
-      --   prefix = "g",
-      --   t = {
-      --     j = { <function 1>, "Next todo comment" },
-      --     k = { <function 2>, "Previous todo comment" },
-      --     name = "Todos"
-      --   }
-      -- }
-      --
-      -- -- Suggested Spec:
-      -- {
-      --   { "gt", group = "Todos" },
-      --   { "gtj", <function 1>, desc = "Next todo comment" },
-      --   { "gtk", <function 1>, desc = "Previous todo comment" },
-      -- }
       local lsp_attach = function(_, bufnr)
         local opts = { buffer = bufnr, remap = false }
         wk.add({
