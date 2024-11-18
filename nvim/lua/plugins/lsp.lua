@@ -30,6 +30,9 @@ return {
 
       -- TODO: figure out how I want to manage lsp completion navigation
       cmp.setup({
+        performance = {
+          fetching_timeout = 1,
+        },
         sources = {
           { name = "nvim_lsp" },
         },
@@ -72,27 +75,22 @@ return {
         local opts = { buffer = bufnr, remap = false }
         wk.add({
           {
-            { "g",  group = "code" },
-            { "gd", vim.lsp.buf.definition,      desc = "Jump to definition" },
-            { "gD", vim.lsp.buf.declaration,     desc = "Jump to declaration" },
-            { "gi", vim.lsp.buf.implementation,  desc = "Jump to implementation" },
+            { "g", group = "code" },
+            { "gd", vim.lsp.buf.definition, desc = "Jump to definition" },
+            { "gD", vim.lsp.buf.declaration, desc = "Jump to declaration" },
+            { "gi", vim.lsp.buf.implementation, desc = "Jump to implementation" },
             { "gt", vim.lsp.buf.type_definition, desc = "Jump to type definition" },
-            { "gR", vim.lsp.buf.references,      desc = "Show references" },
-            { "gr", vim.lsp.buf.rename,          desc = "Rename symbol" },
-            { "gs", vim.lsp.buf.signature_help,  desc = "Display signature info" },
-            { "gx", vim.lsp.buf.code_action,     desc = "Code actions" },
-            { "go", vim.diagnostic.open_float,   desc = "Show diagnostic window" },
-            { "gj", vim.diagnostic.goto_next,    desc = "Goto next diagnostic" },
-            { "gk", vim.diagnostic.goto_prev,    desc = "Goto previous diagnostic" },
+            { "gR", vim.lsp.buf.references, desc = "Show references" },
+            { "gr", vim.lsp.buf.rename, desc = "Rename symbol" },
+            { "gs", vim.lsp.buf.signature_help, desc = "Display signature info" },
+            { "gx", vim.lsp.buf.code_action, desc = "Code actions" },
+            { "go", vim.diagnostic.open_float, desc = "Show diagnostic window" },
+            { "gj", vim.diagnostic.goto_next, desc = "Goto next diagnostic" },
+            { "gk", vim.diagnostic.goto_prev, desc = "Goto previous diagnostic" },
           },
           {
             "<leader>p",
-            function()
-              vim.lsp.buf.format({
-                bufnr = bufnr,
-                async = false,
-              })
-            end,
+            ":LspZeroFormat<CR>",
             desc = "Format code",
           },
 
