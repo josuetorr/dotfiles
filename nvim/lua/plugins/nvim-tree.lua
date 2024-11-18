@@ -40,16 +40,14 @@ return {
     })
 
     local wk = require("which-key")
-    wk.register({
-      e = {
-        name = "Explorer",
-        e = { "<cmd>NvimTreeToggle<CR>", "Toggle file explorer at Root" },
-        f = { "<cmd>NvimTreeFindFileToggle<CR>", "Toggle file explorer at Current File" },
-        x = { "<cmd>NvimTreeCollapse<CR>", "Collapse open folders" },
-        b = { "<cmd>NvimTreeCollapseKeepBuffers<CR>", "Open directories in use" },
-        r = { "<cmd>NvimTreeRefres<CR>", "Refresh file explorer" },
-      },
-    }, { prefix = "<leader>" })
+    wk.add({
+      { "<leader>e",  group = "Explorer" },
+      { "<leader>ee", "<cmd>NvimTreeToggle<CR>",              desc = "Toggle file explorer at Root" },
+      { "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>",      desc = "Toggle file explorer at Current File" },
+      { "<leader>fx", "<cmd>NvimTreeCollapse<CR>",            desc = "Collapse open folders" },
+      { "<leader>fb", "<cmd>NvimTreeCollapseKeepBuffers<CR>", desc = "Open directories in use" },
+      { "<leader>fr", "<cmd>NvimTreeRefres<CR>",              desc = "Refresh file explorer" },
+    })
   end,
   --keys = {
   --  {"<leader>ee", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file explorer at Root"},

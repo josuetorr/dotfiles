@@ -15,21 +15,19 @@ return {
     telescope.setup({
       defaults = {
         path_display = { "smart" },
-      }
+      },
     })
 
     telescope.load_extension("fzf")
 
     local wk = require("which-key")
-    wk.register({
-      f = {
-        name = "Find",
-        f = { tbuiltin.find_files, "Find file in cwd" },
-        g = { tbuiltin.git_files, "Find git files" },
-        s = { tbuiltin.live_grep, "Find string in cwd" },
-        c = { tbuiltin.grep_string, "Find string under cursor" },
-        t = { "<cmd>TodoTelescope<CR>", "Find Todos, etc..." },
-      }
-    }, { prefix = "<leader>"})
-  end
+    wk.add({
+      { "<leader>f",  group = "Find" },
+      { "<leader>ff", tbuiltin.find_files,      desc = "Find file in cwd" },
+      { "<leader>fg", tbuiltin.git_files,       desc = "Find git files" },
+      { "<leader>fs", tbuiltin.live_grep,       desc = "Find string in cwd" },
+      { "<leader>fc", tbuiltin.grep_string,     desc = "Find string under cursor" },
+      { "<leader>ft", "<cmd>TodoTelescope<CR>", desc = "Find Todos, etc..." },
+    })
+  end,
 }

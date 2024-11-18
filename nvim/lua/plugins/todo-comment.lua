@@ -7,14 +7,11 @@ return {
 
     local wk = require("which-key")
 
-    wk.register({
-      t = {
-        name = "Todos",
-        j = { todo_comments.jump_next, "Next todo comment"},
-        k = { todo_comments.jump_prev, "Previous todo comment"},
-      }
-    }, 
-    { prefix = "g"})
+    wk.add({
+      { "gt",  group = "Todos" },
+      { "gtj", todo_comments.jump_next, desc = "Next todo comment" },
+      { "dtk", todo_comments.jump_prev, desc = "Previous todo comment" },
+    })
 
     todo_comments.setup()
   end,
