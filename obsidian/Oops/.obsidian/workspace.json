@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "1fd2b00bea10771a",
+        "id": "ce5a15ce24848369",
         "type": "tabs",
         "children": [
           {
-            "id": "f921ed76d9715e08",
+            "id": "0b9bcba66358437f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ideas.md",
+                "file": "space/Code/Cli.md",
                 "mode": "source",
-                "source": false
-              }
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Cli"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ideas.md",
+                "file": "space/brainstorm/TODOS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +101,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for TODOS"
             }
           },
           {
@@ -102,10 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ideas.md",
+                "file": "space/brainstorm/TODOS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from TODOS"
             }
           },
           {
@@ -116,7 +128,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ideas.md"
-              }
+                "file": "space/brainstorm/TODOS.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of TODOS"
             }
           }
         ]
@@ -146,12 +162,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f921ed76d9715e08",
+  "active": "0b9bcba66358437f",
   "lastOpenFiles": [
+    "space/brainstorm/TODOS.md",
+    "space/brainstorm/Genesis.md",
+    "space/Code/POC.md",
+    "space/Code/Cli.md",
+    "space/Code.md",
+    "space/Code",
+    "p2p/Learning.md",
+    "space/brainstorm",
+    "space",
+    "p2p",
     "2024-08-14.md",
+    "ideas.md",
     "create a link.md",
     "Untitled.canvas",
-    "ideas.md",
     "Welcome.md"
   ]
 }

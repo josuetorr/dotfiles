@@ -11,6 +11,12 @@
 	* join pool (all ares suggestions)
 		* each pool generates some tokens depending on traffic
 		* eventually there will be advertisement unless the networks become self sustainable
+* DOA as an economic entity/agent/social square:
+	* structure:
+		* central point owns the infrastructure
+		* decentralized app runs on this network
+		* transactions are made in crypto (or even dollars, no reason why not)
+		* everyone owns the central point
 * Home: 
 	* Remember Piczo? Let's bring it back using activityPub. 
 	* AI to generate baseline choices for user styling
