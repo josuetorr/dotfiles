@@ -1,14 +1,9 @@
 return {
   {
     "VonHeikemen/lsp-zero.nvim",
-    branch = "v3.x",
+    branch = "v4.x",
     lazy = true,
     config = false,
-    init = function()
-      -- Disable automatic setup, we are doing it manually
-      vim.g.lsp_zero_extend_cmp = 0
-      vim.g.lsp_zero_extend_lspconfig = 0
-    end,
   },
   {
     "williamboman/mason.nvim",
@@ -35,6 +30,12 @@ return {
 
       -- TODO: figure out how I want to manage lsp completion navigation
       cmp.setup({
+        performance = {
+          fetching_timeout = 1,
+        },
+        sources = {
+          { name = "nvim_lsp" },
+        },
         formatting = lsp_zero.cmp_format({ details = true }),
         mapping = cmp.mapping.preset.insert({
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
@@ -68,46 +69,47 @@ return {
       local lsp_zero = require("lsp-zero")
       local wk = require("which-key")
 
-      lsp_zero.extend_lspconfig()
-      lsp_zero.preset("recommended")
-
       --- if you want to know more about lsp-zero and mason.nvim
       --- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
-      lsp_zero.on_attach(function(_, bufnr)
+      local lsp_attach = function(_, bufnr)
         local opts = { buffer = bufnr, remap = false }
-        wk.register({
-          g = {
-            name = "Code",
-            d = { vim.lsp.buf.definition, "Jump to definition" },
-            D = { vim.lsp.buf.declaration, "Jump to declaration" },
-            i = { vim.lsp.buf.implementation, "Jump to implementation" },
-            t = { vim.lsp.buf.type_definition, "Jump to type definition" },
-            R = { vim.lsp.buf.references, "Show references" },
-            r = { vim.lsp.buf.rename, "Rename symbol" },
-            s = { vim.lsp.buf.signature_help, "Display signature info" },
-            x = { vim.lsp.buf.code_action, "Code actions" },
-            o = { vim.diagnostic.open_float, "Show diagnostic window" },
-            j = { vim.diagnostic.goto_next, "Goto next diagnostic" },
-            k = { vim.diagnostic.goto_prev, "Goto previous diagnostic" },
+        wk.add({
+          {
+            { "g", group = "code" },
+            { "gd", vim.lsp.buf.definition, desc = "Jump to definition" },
+            { "gD", vim.lsp.buf.declaration, desc = "Jump to declaration" },
+            { "gi", vim.lsp.buf.implementation, desc = "Jump to implementation" },
+            { "gt", vim.lsp.buf.type_definition, desc = "Jump to type definition" },
+            { "gR", vim.lsp.buf.references, desc = "Show references" },
+            { "gr", vim.lsp.buf.rename, desc = "Rename symbol" },
+            { "gs", vim.lsp.buf.signature_help, desc = "Display signature info" },
+            { "gx", vim.lsp.buf.code_action, desc = "Code actions" },
+            { "go", vim.diagnostic.open_float, desc = "Show diagnostic window" },
+            { "gj", vim.diagnostic.goto_next, desc = "Goto next diagnostic" },
+            { "gk", vim.diagnostic.goto_prev, desc = "Goto previous diagnostic" },
           },
-          ["<leader>p"] = {
-            function()
-              vim.lsp.buf.format({
-                bufnr = bufnr,
-                async = false,
-              })
-            end,
-            "Format code",
+          {
+            "<leader>p",
+            ":LspZeroFormat<CR>",
+            desc = "Format code",
           },
-          K = { vim.lsp.buf.hover, "Hover" },
+
+          { "K", vim.lsp.buf.hover, desc = "Hover" },
         }, opts)
 
         vim.diagnostic.config({
           virtual_text = false,
         })
-      end)
+      end
 
-      require('lspconfig').gleam.setup{}
+      lsp_zero.extend_lspconfig({
+        capabilities = require("cmp_nvim_lsp").default_capabilities(),
+        lsp_attach = lsp_attach,
+        float_border = "rounded",
+        sign_text = true,
+      })
+
+      require("lspconfig").gleam.setup({})
       require("mason-lspconfig").setup({
         ensure_installed = {},
         handlers = {

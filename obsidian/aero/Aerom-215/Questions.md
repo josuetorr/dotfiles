@@ -1,0 +1,3 @@
+- how do we use PaginatedSpecification if it is sealed? Do we keed it sealed or not?
+- is aircraft type going to stay a string?
+- do we want to index flights by aircraft and by gate and by airline number?

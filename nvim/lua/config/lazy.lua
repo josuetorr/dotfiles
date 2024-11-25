@@ -33,9 +33,6 @@ require("lazy").setup({
   },
   install = { colorscheme = { "catppuccin", "nord", "dracula" } },
   checker = { notify = false, enabled = true }, -- automatically check for plugin updates
-  change_detection = {
-    notify = false,
-  },
   performance = {
     rtp = {
       -- disable some rtp plugins

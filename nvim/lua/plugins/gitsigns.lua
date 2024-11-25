@@ -8,9 +8,8 @@ return {
 
       local function map(mode, l, r, desc)
         vim.keymap.set(mode, l, r, { buffer = bufnr, desc = desc })
-        wk.register({
-
-        })
+        -- TODO: finish this
+        wk.add({})
       end
 
       -- Navigation

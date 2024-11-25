@@ -1,0 +1,4 @@
+- fix test
+	- need to figure out how to pass airportId and sectionId
+- mapping
+- Slash airport testing data so it doesn't take too long
