@@ -109,7 +109,17 @@ return {
         sign_text = true,
       })
 
-      require("lspconfig").gleam.setup({})
+      local lsp = require("lspconfig")
+      lsp.gleam.setup({})
+      lsp.denols.setup({
+        on_attach = on_attach,
+        root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc"),
+      })
+      lsp.ts_ls.setup({
+        on_attach = on_attach,
+        root_dir = lsp.util.root_pattern("package.json"),
+        single_file_support = false,
+      })
       require("mason-lspconfig").setup({
         ensure_installed = {},
         handlers = {
