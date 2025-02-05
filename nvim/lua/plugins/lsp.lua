@@ -110,20 +110,30 @@ return {
       })
 
       local lsp = require("lspconfig")
-      lsp.gleam.setup({})
-      lsp.denols.setup({
-        on_attach = on_attach,
-        root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc"),
-      })
-      lsp.ts_ls.setup({
-        on_attach = on_attach,
-        root_dir = lsp.util.root_pattern("package.json"),
-        single_file_support = false,
-      })
       require("mason-lspconfig").setup({
         ensure_installed = {},
         handlers = {
           lsp_zero.default_setup,
+          denols = function()
+            lsp_zero.configure("denols", {
+              on_attach = on_attach,
+              root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc"),
+              single_file_support = false,
+              init_options = {
+                lint = true,
+                unstable = true,
+                suggest = {
+                  imports = {
+                    hosts = {
+                      ["https://deno.land"] = true,
+                      ["https://cdn.nest.land"] = true,
+                      ["https://crux.land"] = true,
+                    },
+                  },
+                },
+              },
+            })
+          end,
           emmet_language_server = function()
             lsp_zero.configure("emmet_language_server", {
               filetypes = {

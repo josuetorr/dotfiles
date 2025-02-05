@@ -20,7 +20,9 @@ local opt = {
 }
 
 vim.opt.shortmess:append("c")
-
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
 for k, v in pairs(opt) do
   vim.opt[k] = v
 end

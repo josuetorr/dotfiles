@@ -4,7 +4,7 @@ return {
   build = ":TSUpdate",
   dependencies = {
     "windwp/nvim-ts-autotag",
-    "nvim-treesitter/playground"
+    "nvim-treesitter/playground",
   },
   config = function()
     -- import nvim-treesitter plugin
@@ -41,6 +41,7 @@ return {
         "query",
         "vimdoc",
         "c",
+        "rust",
       },
       incremental_selection = {
         enable = true,

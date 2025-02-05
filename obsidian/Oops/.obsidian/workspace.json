@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "space/brainstorm/Genesis.md",
+                "file": "space/brainstorm/Architecture.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Genesis"
+              "title": "Architecture"
             }
           }
         ]
@@ -164,9 +164,10 @@
   },
   "active": "0b9bcba66358437f",
   "lastOpenFiles": [
-    "space/Code/Cli.md",
-    "space/brainstorm/TODOS.md",
     "space/brainstorm/Genesis.md",
+    "space/brainstorm/Architecture.md",
+    "space/brainstorm/TODOS.md",
+    "space/Code/Cli.md",
     "space/Code/POC.md",
     "space/Code.md",
     "space/Code",
