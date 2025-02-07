@@ -25,5 +25,3 @@ vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "close pane" })
 vim.keymap.set("n", "<S-Up>", ":resize +2<CR>")
 vim.keymap.set("n", "<S-Down>", ":resize -2<CR>")
 vim.keymap.set("n", "<S-Right>", ":vertical resize -2<CR>")
-
-vim.keymap.set("n", ";", ":")
