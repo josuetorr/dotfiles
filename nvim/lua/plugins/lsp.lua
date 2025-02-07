@@ -26,12 +26,6 @@ return {
             { "gj", vim.diagnostic.goto_next,    desc = "Goto next diagnostic" },
             { "gk", vim.diagnostic.goto_prev,    desc = "Goto previous diagnostic" },
           },
-          {
-            "<leader>p",
-            ":LspZeroFormat<CR>",
-            desc = "Format code",
-          },
-
           { "K", vim.lsp.buf.hover, desc = "Hover" },
         }, opts)
 
