@@ -33,6 +33,7 @@ export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.local/usr/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 
 typeset -U path
 export PATH
