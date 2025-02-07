@@ -28,7 +28,6 @@ return {
       local cmp_action = lsp_zero.cmp_action()
       local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
-      -- TODO: figure out how I want to manage lsp completion navigation
       cmp.setup({
         performance = {
           fetching_timeout = 1,
@@ -111,46 +110,8 @@ return {
 
       local lsp = require("lspconfig")
       require("mason-lspconfig").setup({
-        ensure_installed = {},
-        handlers = {
-          lsp_zero.default_setup,
-          denols = function()
-            lsp_zero.configure("denols", {
-              on_attach = on_attach,
-              root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc"),
-              single_file_support = false,
-              init_options = {
-                lint = true,
-                unstable = true,
-                suggest = {
-                  imports = {
-                    hosts = {
-                      ["https://deno.land"] = true,
-                      ["https://cdn.nest.land"] = true,
-                      ["https://crux.land"] = true,
-                    },
-                  },
-                },
-              },
-            })
-          end,
-          emmet_language_server = function()
-            lsp_zero.configure("emmet_language_server", {
-              filetypes = {
-                "css",
-                "eruby",
-                "html",
-                "javascript",
-                "javascriptreact",
-                "less",
-                "sass",
-                "scss",
-                "pug",
-                "typescriptreact",
-                "php",
-              },
-            })
-          end,
+        ensure_installed = {
+          "lua-language-server"
         },
       })
     end,

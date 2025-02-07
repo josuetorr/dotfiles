@@ -49,10 +49,4 @@ return {
       { "<leader>fr", "<cmd>NvimTreeRefres<CR>",              desc = "Refresh file explorer" },
     })
   end,
-  --keys = {
-  --  {"<leader>ee", "<cmd>NvimTreeToggle<CR>", desc = "Toggle file explorer at Root"},
-  --  {"<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", desc = "Toggle file explorer at Current File"},
-  --  {"<leader>ex", "<cmd>NvimTreeCollapse<CR>", desc = "Collapse open folders"},
-  --  {"<leader>er", "<cmd>NvimTreeRefres<CR>", desc = "Refresh file explorer"},
-  --},
 }
