@@ -6,7 +6,48 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		opts = { ensure_installed = { "lua_ls", "gopls", "templ", "html", "delve", "stylua", "gofumpt" } },
+		opts = { ensure_installed = { "lua_ls", "gopls", "templ", "html", "delve", "stylua" } },
+	},
+	{
+		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
+		dependencies = {
+			{ "L3MON4D3/LuaSnip" },
+		},
+		config = function()
+			-- And you can configure cmp even more, if you want to.
+			local cmp = require("cmp")
+			local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+			-- TODO: figure out how I want to manage lsp completion navigation
+			cmp.setup({
+				sources = {
+					{ name = "nvim_lsp" },
+				},
+				mapping = cmp.mapping.preset.insert({
+					["<CR>"] = cmp.mapping.confirm({ select = true }),
+					["<Tab>"] = cmp.mapping.select_next_item(cmp_select),
+					["<S-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
+					["<C-u>"] = cmp.mapping.scroll_docs(-4),
+					["<C-d>"] = cmp.mapping.scroll_docs(4),
+				}),
+				snippet = {
+					expand = function(args)
+						require("luasnip").lsp_expand(args.body)
+					end,
+				},
+			})
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		cmd = { "LspInfo", "LspInstall", "LspStart" },
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+		},
 		config = function()
 			local wk = require("which-key")
 			local on_attach = function(_, bufnr)
@@ -34,7 +75,7 @@ return {
 				})
 			end
 
-			local capabilities = require("blink.cmp").get_lsp_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			require("mason-lspconfig").setup_handlers({
 				function(server_name)
 					require("lspconfig")[server_name].setup({
@@ -45,5 +86,4 @@ return {
 			})
 		end,
 	},
-	{ "neovim/nvim-lspconfig" },
 }
