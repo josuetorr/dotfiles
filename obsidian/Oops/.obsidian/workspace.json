@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "space/brainstorm/Understanding.md",
+                "file": "space/brainstorm/Architecture.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Understanding"
+              "title": "Architecture"
             }
           }
         ]
@@ -165,8 +165,8 @@
   },
   "active": "0b9bcba66358437f",
   "lastOpenFiles": [
-    "p2p/Learning.md",
     "space/brainstorm/Understanding.md",
+    "p2p/Learning.md",
     "space/brainstorm/Architecture.md",
     "space/brainstorm/Genesis.md",
     "space/brainstorm/TODOS.md",
