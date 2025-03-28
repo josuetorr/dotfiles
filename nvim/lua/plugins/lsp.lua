@@ -6,7 +6,7 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		opts = { ensure_installed = { "lua_ls", "gopls", "templ", "html", "sqls", "svelte", "tailwindcss", "ts_ls" } },
+		opts = { ensure_installed = { "lua_ls", "gopls", "templ", "sqls", "svelte", "tailwindcss", "ts_ls" } },
 		handlers = {
 			["ts_ls"] = function()
 				require("lspconfig").ts_ls.setup({

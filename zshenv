@@ -20,19 +20,22 @@ export DOTNET_HTTPREPL_TELEMETRY_OPTOUT=true
 export MYVIMRC=$DOTFILES/nvim/init.lua
 export MYVIMRC_PARENT=$DOTFILES/nvim/
 
+export GOPATH=$HOME/go/bin
+export GOPATH_BIN=/usr/local/go/bin
+
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:/$HOME/.dotnet/tools
 export PATH=$PATH:/$HOME/.cargo/bin
 export PATH=~/.config/npm-global/bin:$PATH
-export PATH=$PATH:~/.dotfiles/scripts
+export PATH=$PATH:$DOTFILES/script
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.local/usr/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
+export PATH=$PATH:$GOPATH_BIN
+export PATH=$PATH:$GOPATH
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin
 
 typeset -U path
