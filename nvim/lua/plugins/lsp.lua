@@ -1,11 +1,11 @@
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		lazy = false,
 		config = true,
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		opts = { ensure_installed = { "lua_ls", "gopls", "templ", "sqls", "svelte", "tailwindcss", "ts_ls" } },
 		handlers = {
 			["ts_ls"] = function()
@@ -60,13 +60,20 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+			"mason-org/mason.nvim",
+			"mason-org/mason-lspconfig.nvim",
 		},
 		config = function()
 			local wk = require("which-key")
-			local on_attach = function(_, bufnr)
-				local opts = { buffer = bufnr, remap = false }
+			local on_attach = function(bufnr)
+				local jump_to_diagnostic = function(c)
+					return function()
+						vim.diagnostic.jump({ count = c })
+					end
+				end
+				local next = jump_to_diagnostic(1)
+				local prev = jump_to_diagnostic(-1)
+				local opts = { bufnr = bufnr, remap = false }
 				wk.add({
 					{
 						{ "g", group = "code" },
@@ -78,9 +85,9 @@ return {
 						{ "gr", vim.lsp.buf.rename, desc = "Rename symbol" },
 						{ "gs", vim.lsp.buf.signature_help, desc = "Display signature info" },
 						{ "gx", vim.lsp.buf.code_action, desc = "Code actions" },
-						{ "go", vim.diagnostic.open_float, desc = "Show diagnostic window" },
-						{ "gj", vim.diagnostic.goto_next, desc = "Goto next diagnostic" },
-						{ "gk", vim.diagnostic.goto_prev, desc = "Goto previous diagnostic" },
+						{ "go", vim.lsp.diagnostic.open_float, desc = "Show diagnostic window" },
+						{ "gj", next, desc = "Goto next diagnostic" },
+						{ "gk", prev, desc = "Goto previous diagnostic" },
 					},
 					{ "K", vim.lsp.buf.hover, desc = "Hover" },
 				}, opts)
@@ -91,13 +98,9 @@ return {
 			end
 
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			require("mason-lspconfig").setup_handlers({
-				function(server_name)
-					require("lspconfig")[server_name].setup({
-						on_attach = on_attach,
-						capabilities = capabilities,
-					})
-				end,
+			vim.lsp.config("*", {
+				capabilities = capabilities,
+				on_attach = on_attach,
 			})
 		end,
 	},
