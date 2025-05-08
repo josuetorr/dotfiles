@@ -68,7 +68,7 @@ return {
 			local on_attach = function(bufnr)
 				local jump_to_diagnostic = function(c)
 					return function()
-						vim.diagnostic.jump({ count = c })
+						vim.diagnostic.jump({ count = c, float = true })
 					end
 				end
 				local next = jump_to_diagnostic(1)
@@ -85,7 +85,7 @@ return {
 						{ "gr", vim.lsp.buf.rename, desc = "Rename symbol" },
 						{ "gs", vim.lsp.buf.signature_help, desc = "Display signature info" },
 						{ "gx", vim.lsp.buf.code_action, desc = "Code actions" },
-						{ "go", vim.lsp.diagnostic.open_float, desc = "Show diagnostic window" },
+						{ "go", vim.diagnostic.open_float, desc = "Show diagnostic window" },
 						{ "gj", next, desc = "Goto next diagnostic" },
 						{ "gk", prev, desc = "Goto previous diagnostic" },
 					},
