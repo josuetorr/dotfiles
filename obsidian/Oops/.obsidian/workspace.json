@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "space/brainstorm/Architecture.md",
+                "file": "ideas.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Architecture"
+              "title": "ideas"
             }
           }
         ]
@@ -163,11 +163,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0b9bcba66358437f",
+  "active": "036cfd1aad6f1d7b",
   "lastOpenFiles": [
+    "space/brainstorm/Architecture.md",
     "space/brainstorm/Understanding.md",
     "p2p/Learning.md",
-    "space/brainstorm/Architecture.md",
     "space/brainstorm/Genesis.md",
     "space/brainstorm/TODOS.md",
     "space/Code/Cli.md",

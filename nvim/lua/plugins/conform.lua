@@ -26,6 +26,9 @@ return {
 			javascript = { "prettier" },
 			typescript = { "prettier" },
 			svelte = { "prettier" },
+			json = { "prettier" },
+			css = { "prettier" },
+			htmlangular = { "prettier" },
 		},
 		-- Set default options
 		default_format_opts = {
