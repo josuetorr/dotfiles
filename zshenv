@@ -4,9 +4,9 @@ export ZSH=$HOME/.oh-my-zsh
 export ANDROID_STUDIO_ROOT=/usr/local/android-studio
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
-export BROWSER="librewolf"
+export BROWSER="zen"
 
-export TERMINAL="st"
+export TERMINAL="alacritty"
 
 export EDITOR="nvim"
 
