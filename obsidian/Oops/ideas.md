@@ -29,3 +29,7 @@
 			* layout
 			* font
 			* etc.
+# Fediverse
+* offer maintenance for new fediverse platform
+	* The platform itself will be free and open source
+	* we just want to be "paid" to maintain it

@@ -1,1 +1,6 @@
-{}
+{
+  "cssTheme": "Catppuccin",
+  "textFontFamily": "Inter",
+  "monospaceFontFamily": "Inter",
+  "interfaceFontFamily": "Inter"
+}

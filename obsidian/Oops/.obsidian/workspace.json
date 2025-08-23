@@ -155,6 +155,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -163,8 +164,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "036cfd1aad6f1d7b",
+  "active": "0b9bcba66358437f",
   "lastOpenFiles": [
+    "space/brainstorm/dump.md",
+    "ideas.md",
+    "space/brainstorm",
     "space/brainstorm/Architecture.md",
     "space/brainstorm/Understanding.md",
     "p2p/Learning.md",
@@ -178,7 +182,6 @@
     "space",
     "p2p",
     "2024-08-14.md",
-    "ideas.md",
     "create a link.md",
     "Untitled.canvas",
     "Welcome.md"

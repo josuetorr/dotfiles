@@ -29,6 +29,7 @@ return {
 			json = { "prettier" },
 			css = { "prettier" },
 			htmlangular = { "prettier" },
+			markdown = { "prettier" },
 		},
 		-- Set default options
 		default_format_opts = {
