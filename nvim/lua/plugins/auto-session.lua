@@ -12,8 +12,8 @@ return {
 
 		wk.add({
 			{ "<leader>w", group = "Workspace" },
-			{ "<leader>wr", "<cmd>SessionRestore<CR>", desc = "Restore session for cwd" },
-			{ "<leader>ws", "<cmd>SessionSave<CR>", desc = "Save session for auto session root dir" },
+			{ "<leader>wr", "<cmd>AutoSession restore<CR>", desc = "Restore session for cwd" },
+			{ "<leader>ws", "<cmd>AutoSession save<CR>", desc = "Save session for auto session root dir" },
 		})
 	end,
 }

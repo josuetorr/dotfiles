@@ -15,6 +15,11 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
+-- tab navigation
+vim.keymap.set("n", "ttn", ":tabnew<CR>")
+vim.keymap.set("n", "tth", ":tabprev<CR>")
+vim.keymap.set("n", "ttl", ":tabnext<CR>")
+
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "split vertical" })
 vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "split horizontal" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "equalize width" })

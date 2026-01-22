@@ -5,6 +5,6 @@ return {
 		require("catppuccin").setup({
 			flavour = "mocha",
 		})
-		vim.cmd("colo catppuccin")
+		-- vim.cmd("colo catppuccin")
 	end,
 }
