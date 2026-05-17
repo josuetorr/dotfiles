@@ -1,7 +1,8 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.8",
-	dependencies = { "nvim-lua/plenary.nvim" },
+	version = "*",
+	-- tag = "0.1.8",
+	dependencies = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
 	keys = {
 		{ "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file in cwd" },
 		{ "<leader>fg", "<cmd>Telescope git_files<CR>", desc = "Find git files" },

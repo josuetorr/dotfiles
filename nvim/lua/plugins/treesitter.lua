@@ -1,52 +1,21 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
-	dependencies = {
-		"windwp/nvim-ts-autotag",
-		"nvim-treesitter/playground",
-	},
 	config = function()
-		-- import nvim-treesitter plugin
-		local treesitter = require("nvim-treesitter.configs")
+		local ts = require("nvim-treesitter")
+		ts.setup({
+			install_dir = vim.fn.stdpath("data") .. "/site",
+		})
 
-		-- configure treesitter
-		treesitter.setup({ -- enable syntax highlighting
-			highlight = {
-				enable = true,
-			},
-			-- enable indentation
-			indent = { enable = true },
-			-- enable autotagging (w/ nvim-ts-autotag plugin)
-			autotag = {
-				enable = true,
-			},
-			-- ensure these language parsers are installed
-			ensure_installed = {
-				"json",
-				"yaml",
-				"html",
-				"css",
-				"markdown",
-				"markdown_inline",
-				"bash",
-				"lua",
-				"vim",
-				"dockerfile",
-				"gitignore",
-				"go",
-				"templ",
-			},
-			incremental_selection = {
-				enable = true,
-				keymaps = {
-					--TODO: change these keymaps
-					init_selection = "<C-space>",
-					node_incremental = "<C-space>",
-					scope_incremental = false,
-					node_decremental = "<bs>",
-				},
-			},
+		ts.install({ "lua", "vim", "vimdoc", "query", "go" })
+
+		vim.api.nvim_create_autocmd("FileType", {
+			callback = function(args)
+				local lang = vim.treesitter.language.get_lang(vim.bo[args.buf].filetype)
+				if lang then
+					pcall(vim.treesitter.start, args.buf, lang)
+				end
+			end,
 		})
 	end,
 }

@@ -234,5 +234,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 source <(ng completion script)
 
   if [[ -v SSH_CONNECTION ]]; then
-    ~/Projects/op/market_watcher/op_service.sh
+    ~/Projects/op/opmw/op_service.sh
   fi
